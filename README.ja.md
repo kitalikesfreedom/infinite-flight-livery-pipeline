@@ -166,6 +166,20 @@ python tools/selftest.py
 
 CI も同じスクリプトを回す（エントリ名・iOS の根・ドキュメントリンク・機体ページ網羅・サンプル構造）。
 
+## 素材のダウンロード
+
+道具はファイル名と寸法だけで動くので、ここにあるものは塗装に必須ではない。git に置くには重すぎる、
+あるいは原本すぎるものは release に置いてある。
+
+| archive | 内容 | サイズ |
+|---|---|---|
+| `livery-templates.zip` | 塗装済みテンプレート、UV 配置図、空白キャンバス、グリッド、参考レンダー | 約 741 MB |
+| `official-templates.zip` | 機体ごとの公式空白テンプレート書き出し（PNG + WEBP） | 約 142 MB |
+| `sample-packages.zip` | 参考用に保存した公式モデル／塗装パッケージ | 約 451 MB |
+| `manifests.zip` | カタログから保存したパッケージマニフェスト | 約 5 MB |
+
+→ **[assets-2026-11 リリース](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/releases/tag/assets-2026-11)**
+
 ## コントリビュート
 
 この方法が早晩塞がれることは分かっている —— クライアント側に検証が一行入れば終わりだ。だから、

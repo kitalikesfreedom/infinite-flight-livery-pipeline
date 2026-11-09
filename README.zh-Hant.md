@@ -157,6 +157,19 @@ python tools/selftest.py
 
 CI 跑的是同一支腳本：條目名稱斷言、iOS 根路徑、文件連結、機型頁面覆蓋率、範例套件結構。
 
+## 素材下載
+
+工具只靠檔名與尺寸運作，這裡的東西都不是重繪的必需品。太重或不適合放進 git 的素材，放在 release。
+
+| archive | 內容 | 大小 |
+|---|---|---|
+| `livery-templates.zip` | 已塗裝模板、UV 佈局圖、空白畫布、網格圖、參考算圖 | 約 741 MB |
+| `official-templates.zip` | 各機型的官方空白模板匯出（PNG + WEBP） | 約 142 MB |
+| `sample-packages.zip` | 留作參考的官方模型與塗裝套件 | 約 451 MB |
+| `manifests.zip` | 從目錄保存的套件清單 | 約 5 MB |
+
+→ **[assets-2026-11 發佈](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/releases/tag/assets-2026-11)**
+
 ## 參與維護
 
 我知道這個方式很快會被修掉 —— 客戶端只要補一行驗證，門就關了。所以：所有對自製塗裝有興趣的

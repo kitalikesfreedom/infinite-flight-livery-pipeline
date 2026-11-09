@@ -184,6 +184,20 @@ python tools/selftest.py
 CI runs the same script: entry-name assertions, the iOS root, documentation links, per-aircraft page
 coverage, and the example package structure.
 
+## Asset downloads
+
+The tools work from file names and dimensions, so none of this is required to repaint anything.
+Everything too large or too original to sit in git is published as a release attachment instead:
+
+| archive | contents | size |
+|---|---|---|
+| `livery-templates.zip` | painted templates, UV layout sheets, blank canvases, grid overlays, reference renders | ~741 MB |
+| `official-templates.zip` | official blank template exports per aircraft (PNG + WEBP) | ~142 MB |
+| `sample-packages.zip` | official model and livery packages kept for reference | ~451 MB |
+| `manifests.zip` | package manifests kept from the catalog | ~5 MB |
+
+→ **[assets-2026-11 release](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/releases/tag/assets-2026-11)**
+
 ## Contributing
 
 I know this route will be closed sooner or later — one validation check on the client side and the
