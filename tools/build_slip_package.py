@@ -174,11 +174,15 @@ def normalize_name(name: str) -> str:
     return name if name.lower().endswith(".webp") else f"{name}.webp"
 
 
-def build_entries(args: argparse.Namespace) -> list[tuple[str, bytes]]:
+def resolve_prefix(args: argparse.Namespace) -> str:
     prefix = args.entry_prefix or (
         f"{PLATFORM_PREFIX[args.platform]}/aircraft/{args.aircraft_repo.strip().lower()}/liveries/{args.livery_dir}"
     )
-    prefix = prefix.rstrip("/")
+    return prefix.rstrip("/")
+
+
+def build_entries(args: argparse.Namespace) -> list[tuple[str, bytes]]:
+    prefix = resolve_prefix(args)
 
     explicit_size = parse_size(args.size) if args.size else None
     if explicit_size is None:
@@ -234,6 +238,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--fill-orm", action="store_true", help="append Texture_ORM.webp (prevents black/mirror shading)")
     parser.add_argument("--fill-normal", action="store_true", help="append Texture_N.webp (flat normal)")
     parser.add_argument("--entry-prefix", help="override the computed prefix (Generic liveries, custom roots)")
+    parser.add_argument("--keep-from", metavar="ZIP",
+                        help="copy every non-albedo entry from an official livery package, so you only "
+                             "have to paint the albedo files")
     parser.add_argument("--out", required=True)
     parser.add_argument("--dry-run", action="store_true", help="print entry names only")
     args = parser.parse_args(argv)
@@ -244,6 +251,26 @@ def main(argv: list[str] | None = None) -> int:
         args.texture = auto_textures(args.aircraft_repo, Path(args.art))
 
     entries = build_entries(args)
+
+    if args.keep_from:
+        src = Path(args.keep_from)
+        if not src.is_file():
+            die(f"--keep-from: no such archive: {src}")
+        prefix = resolve_prefix(args)
+        have = {name.rsplit("/", 1)[-1] for name, _ in entries}
+        added = 0
+        with zipfile.ZipFile(src) as zf:
+            for info in zf.infolist():
+                if info.is_dir():
+                    continue
+                base = info.filename.rsplit("/", 1)[-1]
+                if "_albd" in base.lower() or base in have:
+                    continue
+                entries.append((f"{prefix}/{base}", zf.read(info)))
+                have.add(base)
+                added += 1
+        print(f"keep-from: reused {added} companion file(s) from {src.name}", file=sys.stderr)
+
     if args.dry_run:
         print(json.dumps({"entries": [name for name, _ in entries]}, ensure_ascii=False, indent=2))
         return 0

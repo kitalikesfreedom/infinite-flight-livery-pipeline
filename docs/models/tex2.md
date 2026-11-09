@@ -81,11 +81,25 @@ Generic packages: T6 Texan II → `?`, T6 Texan II → `?`, T6 Texan II → `?`
 
 ## 5. Package it
 
+**Format: Multi-part (legacy shading).** 5 baseColor images across fuselage, wings, engines, gear and details — each a separate PBR material, so a partial repaint shows up as a patchwork.
+
+### Files this aircraft needs
+
+| file | dimensions | role | what to put there |
+|---|---|---|---|
+| `body_center.webp` | 4096x4096 | surface / **paint** | your artwork |
+| `body_front.webp` | 4096x4096 | surface / **paint** | your artwork |
+| `tail.webp` | 4096x4096 | surface / **paint** | your artwork |
+| `wing_left.webp` | 4096x4096 | surface / **paint** | your artwork |
+| `wing_right.webp` | 4096x4096 | surface / **paint** | your artwork |
+
+### Option A - explicit list (copy and run)
+
 ```bash
 python tools/build_slip_package.py \
   --platform android \
   --aircraft-repo infiniteflight-aircraft-tex2 \
-  --livery-dir "<livery directory>" \
+  --livery-dir "<a directory from the table above>" \
   --texture "body_center.webp=art/body_center.png" \
   --texture "body_front.webp=art/body_front.png" \
   --texture "tail.webp=art/tail.png" \
@@ -94,17 +108,41 @@ python tools/build_slip_package.py \
   --out out/tex2.zip
 ```
 
-Resolves to, on Android:
+### Option B - auto mode
+
+```bash
+python tools/build_slip_package.py --auto --art art/ \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-tex2 \
+  --livery-dir "<a directory from the table above>" \
+  --out out/tex2.zip
+```
+
+`--auto` reads `data/livery_files.json`, then looks for these stems in `art/`
+(`.png`, `.webp`, `.jpg` are all accepted):
 
 ```
-../../files/aircraft/infiniteflight-aircraft-tex2/liveries/<livery directory>/<file name>
+body_center.png
+body_front.png
+tail.png
+wing_left.png
+wing_right.png
 ```
 
-On iOS the root differs — replace `files` with `Library/dlc`:
+### Where the entries land
 
 ```
-../../Library/dlc/aircraft/infiniteflight-aircraft-tex2/liveries/<livery directory>/<file name>
+android: ../../files/aircraft/infiniteflight-aircraft-tex2/liveries/<directory>/<file>.webp
+ios:     ../../Library/dlc/aircraft/infiniteflight-aircraft-tex2/liveries/<directory>/<file>.webp
 ```
+
+`<directory>` must come from the table in section 4 - the folder name, not the name the app
+shows.
+
+### How to tell it worked
+
+Each listed file is its own material, so the repaint is all-or-nothing per part: a wing still in
+official colours means `wing_*.webp` did not land, a dark hull means the `_ORM` partner is missing.
 
 ## 6. Import
 

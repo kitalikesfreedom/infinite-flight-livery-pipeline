@@ -133,6 +133,10 @@ python tools/build_slip_package.py --auto --art art/ \
 A321neo なら 11 行が 1 行、A320neo なら 20 行が 1 行になる。合わなかったファイルは教えてくれるし、
 絵が無い PBR 同伴ファイルは `--fill-orm` / `--fill-normal` で合成できる。
 
+**必要なファイルは機体ごとに違い、テンプレートではない。** C172 は名前の違う部品 5 枚、A321neo は
+11 枚、A320 は 1 枚＋合成 2 枚。寸法とその形式固有の落とし穴を含めた全レシピは
+[packaging-matrix.md](docs/models/packaging-matrix.md) と各機体のページにある。
+
 ### ④ 取り込む
 
 1. アプリ起動 → **Scenery Editor**
@@ -164,7 +168,7 @@ docs/
   ios.md                iOS のコンテナ根・転送・キャッシュ
   troubleshooting.md    黒くなる／一度しか効かない／無言の失敗／潰した遠回り
   data-provenance.md    65 機体ページをどう生成したか
-  models/               全 65 機体（index + 各機体ページ）
+  models/               全 65 機体（index・パッケージ一覧・各機体ページ）
 tools/                     梱包・探針・カタログ取得・抽出・生成・自己検査
 data/                      カタログのスナップショットと生成済みインベントリ
 examples/a320-demo/        そのまま取り込めるサンプル

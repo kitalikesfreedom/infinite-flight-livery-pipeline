@@ -64,33 +64,96 @@ Generic packages: Boeing 747-SOFIA → `?`
 
 ## 5. Package it
 
+**Format: Few-part (legacy shading).** 3 baseColor images, one per body area, each its own PBR material.
+
+### Files this aircraft needs
+
+| file | dimensions | role | what to put there |
+|---|---|---|---|
+| `74SP.ktx2` | ? | surface / **paint** | your artwork |
+| `74SP_ORM.ktx2` | ? | orm / **paint** | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `Shadow.ktx2` | ? | surface / **paint** | your artwork |
+| `B747_Cockpit.ktx2` | ? | interior / keep | your artwork |
+| `B747_Cockpit_ORM.ktx2` | ? | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `B747_Glass.ktx2` | ? | glass / keep | your artwork |
+| `B747_Glass_ORM.ktx2` | ? | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+
+### Option A - explicit list (copy and run)
+
 ```bash
 python tools/build_slip_package.py \
   --platform android \
   --aircraft-repo infiniteflight-aircraft-nasa747 \
-  --livery-dir "<livery directory>" \
-  --texture "74SP.ktx2=art/74SP.ktx2" \
-  --texture "74SP_ORM.ktx2=art/74SP_ORM.ktx2" \
-  --texture "Shadow.ktx2=art/Shadow.ktx2" \
-  # ship these unchanged (a solid fill also works) \
-  --texture "B747_Cockpit.ktx2=art/B747_Cockpit.ktx2" \
-  --texture "B747_Cockpit_ORM.ktx2=art/B747_Cockpit_ORM.ktx2" \
-  --texture "B747_Glass.ktx2=art/B747_Glass.ktx2" \
-  --texture "B747_Glass_ORM.ktx2=art/B747_Glass_ORM.ktx2" \
+  --livery-dir "<a directory from the table above>" \
+  --texture "74SP.ktx2=art/74SP.png" \
+  --texture "74SP_ORM.ktx2=art/74SP_ORM.png" \
+  --texture "Shadow.ktx2=art/Shadow.png" \
+  --texture "B747_Cockpit.ktx2=art/B747_Cockpit.png" \
+  --texture "B747_Cockpit_ORM.ktx2=art/B747_Cockpit_ORM.png" \
+  --texture "B747_Glass.ktx2=art/B747_Glass.png" \
+  --texture "B747_Glass_ORM.ktx2=art/B747_Glass_ORM.png" \
   --out out/nasa747.zip
 ```
 
-Resolves to, on Android:
+### Option B - auto mode
+
+```bash
+python tools/build_slip_package.py --auto --art art/ \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-nasa747 \
+  --livery-dir "<a directory from the table above>" \
+  --out out/nasa747.zip
+```
+
+`--auto` reads `data/livery_files.json`, then looks for these stems in `art/`
+(`.png`, `.webp`, `.jpg` are all accepted):
 
 ```
-../../files/aircraft/infiniteflight-aircraft-nasa747/liveries/<livery directory>/<file name>
+74SP.png
+74SP_ORM.png
+B747_Cockpit.png
+B747_Cockpit_ORM.png
+B747_Glass.png
+B747_Glass_ORM.png
+Shadow.png
 ```
 
-On iOS the root differs — replace `files` with `Library/dlc`:
+### Option C - reuse the companions from an official package
+
+The `keep` rows above are not artwork: they are masks the vendor ships. Rather than
+recreating them, pull them out of an official livery package:
+
+```bash
+python tools/fetch_catalog.py --download --type AircraftLivery \
+  --match nasa747 --out dl/
+python tools/build_slip_package.py \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-nasa747 \
+  --livery-dir "<a directory from the table above>" \
+  --texture "74SP.ktx2=art/74SP.png" \
+  --texture "74SP_ORM.ktx2=art/74SP_ORM.png" \
+  --texture "Shadow.ktx2=art/Shadow.png" \
+  --keep-from dl/<downloaded package>.zip \
+  --out out/nasa747.zip
+```
+
+`--keep-from` copies every entry in that archive **except** the albedo files, so your own
+artwork always wins and the companions stay byte-identical to the vendor's.
+
+### Where the entries land
 
 ```
-../../Library/dlc/aircraft/infiniteflight-aircraft-nasa747/liveries/<livery directory>/<file name>
+android: ../../files/aircraft/infiniteflight-aircraft-nasa747/liveries/<directory>/<file>.webp
+ios:     ../../Library/dlc/aircraft/infiniteflight-aircraft-nasa747/liveries/<directory>/<file>.webp
 ```
+
+`<directory>` must come from the table in section 4 - the folder name, not the name the app
+shows.
+
+### How to tell it worked
+
+Each listed file is its own material, so the repaint is all-or-nothing per part: a wing still in
+official colours means `wing_*.webp` did not land, a dark hull means the `_ORM` partner is missing.
 
 ## 6. Import
 

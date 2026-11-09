@@ -111,6 +111,16 @@ def main() -> int:
             if page.is_file() and f"--aircraft-repo {repo}" not in page.read_text(encoding="utf-8"):
                 bad.append(repo)
         check("aircraft pages carry a runnable packaging command", not bad, ", ".join(bad))
+
+        # a '#' inside a backslash continuation silently turns the rest of the command into a comment
+        broken_cmd = []
+        for page in (ROOT / "docs" / "models").glob("*.md"):
+            text = page.read_text(encoding="utf-8")
+            for block in re.findall(r"```bash\n(.*?)```", text, flags=re.S):
+                if re.search(r"\\\s*\n\s*#", block):
+                    broken_cmd.append(page.stem)
+                    break
+        check("packaging commands survive a shell", not broken_cmd, ", ".join(broken_cmd[:6]))
     else:
         check("data/models_index.json present", False)
 

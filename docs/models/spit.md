@@ -66,15 +66,34 @@ The directory name is `Path.GetFileName(LiveryPackage.Path)` — **not** what th
 
 ## 5. Package it
 
+**Format: Few-part (legacy shading).** 3 baseColor images, one per body area, each its own PBR material.
+
+### Files this aircraft needs
+
+| file | dimensions | role | what to put there |
+|---|---|---|---|
+| `Spitfire_Fan.webp` | 1024x1024 | surface / **paint** | your artwork |
+| `SpitfireMk8_2.webp` | 1024x1024 | surface / **paint** | your artwork |
+| `SpitfireMk8_1.webp` | 1024x1024 | surface / **paint** | your artwork |
+| `Spitfire_Fan_ORM.webp` | 512x512 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `SpitfireMk8_2_ORM.webp` | 1024x1024 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `Spitfire_Glass.webp` | 512x512 | glass / keep | your artwork |
+| `SpitfireMk8_2_N.webp` | 1024x1024 | normal / keep | solid `(128,128,255)` - flat normal |
+| `SpitfireMk8_1_ORM.webp` | 1024x1024 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `Shadow.webp` | 256x256 | surface / keep | your artwork |
+| `Spitfire_Glass_ORM.webp` | 512x512 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `SpitfireMk8_1_N.webp` | 1024x1024 | normal / keep | solid `(128,128,255)` - flat normal |
+
+### Option A - explicit list (copy and run)
+
 ```bash
 python tools/build_slip_package.py \
   --platform android \
   --aircraft-repo infiniteflight-aircraft-spit \
-  --livery-dir "<livery directory>" \
+  --livery-dir "<a directory from the table above>" \
   --texture "Spitfire_Fan.webp=art/Spitfire_Fan.png" \
   --texture "SpitfireMk8_2.webp=art/SpitfireMk8_2.png" \
   --texture "SpitfireMk8_1.webp=art/SpitfireMk8_1.png" \
-  # ship these unchanged (a solid fill also works) \
   --texture "Spitfire_Fan_ORM.webp=art/Spitfire_Fan_ORM.png" \
   --texture "SpitfireMk8_2_ORM.webp=art/SpitfireMk8_2_ORM.png" \
   --texture "Spitfire_Glass.webp=art/Spitfire_Glass.png" \
@@ -86,17 +105,69 @@ python tools/build_slip_package.py \
   --out out/spit.zip
 ```
 
-Resolves to, on Android:
+### Option B - auto mode
+
+```bash
+python tools/build_slip_package.py --auto --art art/ \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-spit \
+  --livery-dir "<a directory from the table above>" \
+  --out out/spit.zip
+```
+
+`--auto` reads `data/livery_files.json`, then looks for these stems in `art/`
+(`.png`, `.webp`, `.jpg` are all accepted):
 
 ```
-../../files/aircraft/infiniteflight-aircraft-spit/liveries/<livery directory>/<file name>
+Shadow.png
+SpitfireMk8_1.png
+SpitfireMk8_1_N.png
+SpitfireMk8_1_ORM.png
+SpitfireMk8_2.png
+SpitfireMk8_2_N.png
+SpitfireMk8_2_ORM.png
+Spitfire_Fan.png
+Spitfire_Fan_ORM.png
+Spitfire_Glass.png
+Spitfire_Glass_ORM.png
 ```
 
-On iOS the root differs — replace `files` with `Library/dlc`:
+### Option C - reuse the companions from an official package
+
+The `keep` rows above are not artwork: they are masks the vendor ships. Rather than
+recreating them, pull them out of an official livery package:
+
+```bash
+python tools/fetch_catalog.py --download --type AircraftLivery \
+  --match spit --out dl/
+python tools/build_slip_package.py \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-spit \
+  --livery-dir "<a directory from the table above>" \
+  --texture "Spitfire_Fan.webp=art/Spitfire_Fan.png" \
+  --texture "SpitfireMk8_2.webp=art/SpitfireMk8_2.png" \
+  --texture "SpitfireMk8_1.webp=art/SpitfireMk8_1.png" \
+  --keep-from dl/<downloaded package>.zip \
+  --out out/spit.zip
+```
+
+`--keep-from` copies every entry in that archive **except** the albedo files, so your own
+artwork always wins and the companions stay byte-identical to the vendor's.
+
+### Where the entries land
 
 ```
-../../Library/dlc/aircraft/infiniteflight-aircraft-spit/liveries/<livery directory>/<file name>
+android: ../../files/aircraft/infiniteflight-aircraft-spit/liveries/<directory>/<file>.webp
+ios:     ../../Library/dlc/aircraft/infiniteflight-aircraft-spit/liveries/<directory>/<file>.webp
 ```
+
+`<directory>` must come from the table in section 4 - the folder name, not the name the app
+shows.
+
+### How to tell it worked
+
+Each listed file is its own material, so the repaint is all-or-nothing per part: a wing still in
+official colours means `wing_*.webp` did not land, a dark hull means the `_ORM` partner is missing.
 
 ## 6. Import
 

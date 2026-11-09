@@ -66,25 +66,85 @@ def pipeline(paint: list[dict]) -> tuple[str, str]:
             "separate PBR material, so a partial repaint shows up as a patchwork.")
 
 
-def paint_cmd(repo: str, paint: list[dict], extras: list[dict], platform: str = "android") -> str:
+def is_legacy_fillable(f: dict) -> bool:
+    """Texture_ORM.webp / Texture_N.webp are exactly what --fill-orm / --fill-normal synthesise."""
+    return f["name"] in ("Texture_ORM.webp", "Texture_N.webp")
+
+
+def advice_for(f: dict) -> str:
+    kind = f.get("kind")
+    name = f["name"].lower()
+    if kind == "orm" or name.endswith("_orm.webp"):
+        return "solid `(255,200,0)` - no occlusion, fully rough, non-metal"
+    if kind == "normal" or name.endswith("_norm.webp") or name.endswith("_n.webp"):
+        return "solid `(128,128,255)` - flat normal"
+    if kind == "composite" or name.endswith("_comp.webp"):
+        return "ship the official file unchanged; it carries the metal/rough mask"
+    if kind == "emissive" or name.endswith("_emis.webp") or name.endswith("_e.webp"):
+        return "ship as-is unless you want glowing panels"
+    if "original" in name:
+        return "optional - the vendor keeps the full-resolution original here"
+    return "your artwork"
+
+
+def explicit_cmd(repo: str, paint: list[dict], extras: list[dict], legacy_fillable: bool) -> str:
+    """A copy-pasteable command. No inline comments: `#` inside a backslash continuation breaks bash.
+
+    `extras` here must already be the *required* companions only - optional entries such as the
+    vendor's full-resolution `Texture_Original.webp` differ in size and would trip the dimension check.
+    """
     ind = "  "
     lines = [
         "python tools/build_slip_package.py \\",
-        f"{ind}--platform {platform} \\",
+        f"{ind}--platform android \\",
         f"{ind}--aircraft-repo {repo} \\",
-        f'{ind}--livery-dir "<livery directory>" \\',
+        f'{ind}--livery-dir "<a directory from the table above>" \\',
     ]
-    for f in paint:
-        lines.append(f'{ind}--texture "{f["name"]}=art/{f["name"].replace(".webp", ".png")}" \\')
-    if extras:
-        lines.append(f"{ind}# ship these unchanged (a solid fill also works) \\")
-        for f in extras:
-            lines.append(f'{ind}--texture "{f["name"]}=art/{f["name"].replace(".webp", ".png")}" \\')
+    for f in list(paint) + list(extras):
+        stem = f["name"].rsplit(".", 1)[0]
+        lines.append(f'{ind}--texture "{f["name"]}=art/{stem}.png" \\')
+    if legacy_fillable:
+        lines.append(f"{ind}--fill-orm --fill-normal \\")
     lines.append(f"{ind}--out out/{slug(repo)}.zip")
     return "\n".join(lines)
 
 
+def auto_cmd(repo: str, paint: list[dict], extras: list[dict], legacy_fillable: bool) -> str:
+    ind = "  "
+    lines = [
+        "python tools/build_slip_package.py --auto --art art/ \\",
+        f"{ind}--platform android \\",
+        f"{ind}--aircraft-repo {repo} \\",
+        f'{ind}--livery-dir "<a directory from the table above>" \\',
+    ]
+    if legacy_fillable:
+        lines.append(f"{ind}--fill-orm --fill-normal \\")
+    lines.append(f"{ind}--out out/{slug(repo)}.zip")
+    return "\n".join(lines)
+
+
+def verify_hint(plabel: str) -> list[str]:
+    if plabel.startswith("Legacy (single texture)"):
+        return [
+            "If only the baseColor had been replaced the fuselage would render as black chrome - so the",
+            "fact that it looks clean proves the ORM and normal companions are present. A dark, mirror-like",
+            "hull means one of the three did not land.",
+        ]
+    if plabel.startswith("Modern"):
+        return [
+            "Every part is a separate material: a correct repaint shows **all** listed albedo files changed.",
+            "One part still in official colours means that `M_*_albd.webp` entry is missing from the archive.",
+            "Do not touch the `_comp` files - they carry the metallic/roughness mask and are what stop the",
+            "fuselage from turning into a mirror.",
+        ]
+    return [
+        "Each listed file is its own material, so the repaint is all-or-nothing per part: a wing still in",
+        "official colours means `wing_*.webp` did not land, a dark hull means the `_ORM` partner is missing.",
+    ]
+
+
 rows = []
+matrix = []
 kinds_counter: Counter[str] = Counter()
 
 for repo in sorted(idx):
@@ -201,12 +261,100 @@ for repo in sorted(idx):
         lines.append("No named liveries ship with this aircraft; only the Generic package exists.")
     lines.append("")
 
-    # 5. package
-    lines += ["## 5. Package it", "", "```bash", paint_cmd(repo, paint, extras), "```", "",
-              "Resolves to, on Android:", "", "```",
-              f"../../files/aircraft/{repo}/liveries/<livery directory>/<file name>", "```", "",
-              "On iOS the root differs — replace `files` with `Library/dlc`:", "", "```",
-              f"../../Library/dlc/aircraft/{repo}/liveries/<livery directory>/<file name>", "```", ""]
+    # 5. package - a per-aircraft recipe, not a template
+    # The legacy single-texture material always reads Texture_ORM / Texture_N, whether or not the
+    # official livery package happens to ship them, so those two get synthesised.
+    legacy_fillable = any(f["name"] == "Texture.webp" for f in paint)
+    is_optional = lambda f: "original" in f["name"].lower()
+    optional_extras = [f for f in extras if is_optional(f)]
+    required_extras = [f for f in extras if not is_optional(f)]
+
+    lines += ["## 5. Package it", ""]
+    lines.append(f"**Format: {plabel}.** {ptext}")
+    lines.append("")
+    lines.append("### Files this aircraft needs")
+    lines.append("")
+    lines.append("| file | dimensions | role | what to put there |")
+    lines.append("|---|---|---|---|")
+    for f in paint + required_extras + optional_extras:
+        size = f.get("size")
+        dim = f"{size[0]}x{size[1]}" if size else "?"
+        if f in paint:
+            mark = "**paint**"
+        elif is_optional(f):
+            mark = "optional"
+        else:
+            mark = "keep"
+        lines.append(f"| `{f['name']}` | {dim} | {f.get('kind') or '?'} / {mark} | {advice_for(f)} |")
+    lines.append("")
+    if optional_extras:
+        lines.append("The *optional* rows are not part of the command below: they are the vendor's own")
+        lines.append("full-resolution copies, they do not match the working resolution, and nothing reads them")
+        lines.append("at runtime. Include them only if you deliberately want to overwrite them.")
+        lines.append("")
+    lines.append("### Option A - explicit list (copy and run)")
+    lines.append("")
+    lines.append("```bash")
+    lines.append(explicit_cmd(repo, paint, required_extras, legacy_fillable))
+    lines.append("```")
+    lines.append("")
+    lines.append("### Option B - auto mode")
+    lines.append("")
+    lines.append("```bash")
+    lines.append(auto_cmd(repo, paint, required_extras, legacy_fillable))
+    lines.append("```")
+    lines.append("")
+    stems = sorted({f["name"].rsplit(".", 1)[0] for f in paint + required_extras})
+    lines.append("`--auto` reads `data/livery_files.json`, then looks for these stems in `art/`")
+    lines.append("(`.png`, `.webp`, `.jpg` are all accepted):")
+    lines.append("")
+    lines.append("```")
+    for s in stems:
+        lines.append(f"{s}.png")
+    lines.append("```")
+    lines.append("")
+    if legacy_fillable:
+        lines.append("`--fill-orm --fill-normal` synthesises the two PBR companions at the right size, so you do")
+        lines.append("not have to paint them. Drop the flags if you supply your own.")
+        lines.append("")
+    if required_extras:
+        lines.append("### Option C - reuse the companions from an official package")
+        lines.append("")
+        lines.append("The `keep` rows above are not artwork: they are masks the vendor ships. Rather than")
+        lines.append("recreating them, pull them out of an official livery package:")
+        lines.append("")
+        lines.append("```bash")
+        lines.append(f"python tools/fetch_catalog.py --download --type AircraftLivery \\")
+        lines.append(f"  --match {slug(repo)} --out dl/")
+        lines.append(f"python tools/build_slip_package.py \\")
+        lines.append(f"  --platform android \\")
+        lines.append(f"  --aircraft-repo {repo} \\")
+        lines.append(f'  --livery-dir "<a directory from the table above>" \\')
+        for f in paint:
+            stem = f["name"].rsplit(".", 1)[0]
+            lines.append(f'  --texture "{f["name"]}=art/{stem}.png" \\')
+        lines.append(f"  --keep-from dl/<downloaded package>.zip \\")
+        lines.append(f"  --out out/{slug(repo)}.zip")
+        lines.append("```")
+        lines.append("")
+        lines.append("`--keep-from` copies every entry in that archive **except** the albedo files, so your own")
+        lines.append("artwork always wins and the companions stay byte-identical to the vendor's.")
+        lines.append("")
+    lines.append("### Where the entries land")
+    lines.append("")
+    lines.append("```")
+    lines.append(f"android: ../../files/aircraft/{repo}/liveries/<directory>/<file>.webp")
+    lines.append(f"ios:     ../../Library/dlc/aircraft/{repo}/liveries/<directory>/<file>.webp")
+    lines.append("```")
+    lines.append("")
+    lines.append("`<directory>` must come from the table in section 4 - the folder name, not the name the app")
+    lines.append("shows.")
+    lines.append("")
+    lines.append("### How to tell it worked")
+    lines.append("")
+    for hint in verify_hint(plabel):
+        lines.append(hint)
+    lines.append("")
 
     # 6. import
     lines += ["## 6. Import", "", "```bash",
@@ -219,6 +367,19 @@ for repo in sorted(idx):
 
     (OUT / f"{slug(repo)}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     rows.append((repo, name, plabel, len(paint), len(liveries), len(gltf), len(everything)))
+
+    dims = sorted({f"{f['size'][0]}x{f['size'][1]}" for f in everything if f.get("size")})
+    notes = []
+    if legacy_fillable:
+        notes.append("three files or black chrome")
+    if any(f["name"].lower().endswith(".ktx2") for f in everything):
+        notes.append("contains .ktx2 entries")
+    if inv_source == "shared":
+        notes.append("inventory from the shared texture set")
+    elif inv_source == "gltf":
+        notes.append("inventory from glTF references only")
+    matrix.append((name, slug(repo), plabel, len(paint), len(everything),
+                   " / ".join(dims) or "?", "; ".join(notes) or "-"))
 
 # ---------- index ----------
 lines = [
@@ -255,5 +416,53 @@ lines += [
 ]
 (OUT / "index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
-print(f"wrote {len(rows)} aircraft pages + index.md")
+# ---------- packaging matrix ----------
+m = [
+    "# Packaging matrix",
+    "",
+    f"All {len(matrix)} aircraft side by side: the format, how many files the official livery package",
+    "ships for it, how many of those you actually paint, the dimensions its model expects, and the trap",
+    "specific to that format. Every row links to the full page with both copy-and-run commands.",
+    "",
+    "| aircraft | page | format | files | paint | dimensions | notes |",
+    "|---|---|---|---|---|---|---|",
+]
+for name, slug_, fmt, npaint, nfile, dims, note in matrix:
+    m.append(f"| {name} | [`{slug_}`]({slug_}.md) | {fmt} | {nfile} | {npaint} | {dims} | {note} |")
+
+m += [
+    "",
+    "## The formats, and what changes between them",
+    "",
+    "**Legacy (single texture)** - one 2048x2048 baseColor image. `Texture.webp` ships alone but the",
+    "material also reads `Texture_ORM.webp` (metal/roughness/occlusion) and `Texture_N.webp` (normal).",
+    "Replace the baseColor without those two and the hull renders as black chrome. The tool's",
+    "`--fill-orm --fill-normal` synthesises both at the right dimensions.",
+    "",
+    "**Legacy (single named texture)** - the same shape under a model-specific name: `texture.webp`,",
+    "`744GEN.webp`, `B717.webp`, `c17.webp`, `SR22.webp`, `767AME.webp`. Same three-file rule, different",
+    "stem, so `--fill-orm --fill-normal` does **not** apply - supply the `_ORM` companion the official",
+    "package ships, or accept slightly wrong shading.",
+    "",
+    "**Modern (per-part albedo)** - A320neo and A321neo. One `<Part>_albd.webp` per body part at",
+    "4096x4096, each paired with a `_comp.webp` carrying the metal/roughness mask. You paint only the",
+    "`_albd` files; the `_comp` files must ship unchanged or the parts stop matching each other. Miss",
+    "one albedo and that part stays in official colours.",
+    "",
+    "**Few-part / Multi-part (legacy shading)** - the majority: fuselage, wings, engines, gear and tail",
+    "as separate materials under names like `fuselage_front`, `wing_lh`, `b757_tail`, `b777_200er_uv5`.",
+    "Naming is per-aircraft and not derivable - take the list from the page. A partial repaint shows as a",
+    "patchwork, and any part left dark is missing its `_ORM` partner.",
+    "",
+    "## Commands are per aircraft",
+    "",
+    "Do not copy the A320 command to another type. The `--texture` list is the aircraft's own inventory:",
+    "a C172 needs five differently named part files, an A321neo needs eleven, an A320 needs one plus two",
+    "synth companions. The exact list is in each page's section 5, and `--auto` reads it from",
+    "`data/livery_files.json` so you only supply artwork with matching stems.",
+    "",
+]
+(OUT / "packaging-matrix.md").write_text("\n".join(m) + "\n", encoding="utf-8")
+
+print(f"wrote {len(rows)} aircraft pages + index.md + packaging-matrix.md")
 print("pipelines:", dict(kinds_counter))

@@ -123,6 +123,10 @@ python tools/build_slip_package.py --auto --art art/ \
 A321neo 的 11 行、A320neo 的 20 行，都變成 1 行。對不上的檔案它會告訴你；沒有圖的 PBR 配套檔
 可以用 `--fill-orm` / `--fill-normal` 合成。
 
+**清單是逐機型的，不是模板。** C172 要五張名字各異的部件圖、A321neo 要十一張、A320 則是一張加
+兩張合成配套。每一型的完整配方（含尺寸與該格式特有的坑）都在
+[packaging-matrix.md](docs/models/packaging-matrix.md) 與各機型自己的頁面。
+
 ### ④ 匯入
 
 1. 開 App → **Scenery Editor**
@@ -154,7 +158,7 @@ docs/
   ios.md                iOS 容器根、傳輸方式、快取
   troubleshooting.md    變黑／只能改一次／無聲失敗／已排除的死路
   data-provenance.md    65 個機型頁面是怎麼生成的
-  models/               全 65 型（索引 + 各機型頁）
+  models/               全 65 型（索引、打包總表、各機型頁）
 tools/                     打包、探測、目錄取得、抽取、生成、自檢
 data/                      目錄快照與生成後的清冊
 examples/a320-demo/        可直接匯入的範例

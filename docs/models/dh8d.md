@@ -91,28 +91,85 @@ The directory name is `Path.GetFileName(LiveryPackage.Path)` — **not** what th
 
 ## 5. Package it
 
+**Format: Legacy (single texture).** One 2048x2048 baseColor image. Replace it together with `Texture_ORM.webp` and `Texture_N.webp`, or the fuselage renders as black chrome.
+
+### Files this aircraft needs
+
+| file | dimensions | role | what to put there |
+|---|---|---|---|
+| `Texture.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `Texture_Emissive.webp` | 128x128 | surface / keep | your artwork |
+
+### Option A - explicit list (copy and run)
+
 ```bash
 python tools/build_slip_package.py \
   --platform android \
   --aircraft-repo infiniteflight-aircraft-dh8d \
-  --livery-dir "<livery directory>" \
+  --livery-dir "<a directory from the table above>" \
   --texture "Texture.webp=art/Texture.png" \
-  # ship these unchanged (a solid fill also works) \
   --texture "Texture_Emissive.webp=art/Texture_Emissive.png" \
+  --fill-orm --fill-normal \
   --out out/dh8d.zip
 ```
 
-Resolves to, on Android:
+### Option B - auto mode
+
+```bash
+python tools/build_slip_package.py --auto --art art/ \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-dh8d \
+  --livery-dir "<a directory from the table above>" \
+  --fill-orm --fill-normal \
+  --out out/dh8d.zip
+```
+
+`--auto` reads `data/livery_files.json`, then looks for these stems in `art/`
+(`.png`, `.webp`, `.jpg` are all accepted):
 
 ```
-../../files/aircraft/infiniteflight-aircraft-dh8d/liveries/<livery directory>/<file name>
+Texture.png
+Texture_Emissive.png
 ```
 
-On iOS the root differs — replace `files` with `Library/dlc`:
+`--fill-orm --fill-normal` synthesises the two PBR companions at the right size, so you do
+not have to paint them. Drop the flags if you supply your own.
+
+### Option C - reuse the companions from an official package
+
+The `keep` rows above are not artwork: they are masks the vendor ships. Rather than
+recreating them, pull them out of an official livery package:
+
+```bash
+python tools/fetch_catalog.py --download --type AircraftLivery \
+  --match dh8d --out dl/
+python tools/build_slip_package.py \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-dh8d \
+  --livery-dir "<a directory from the table above>" \
+  --texture "Texture.webp=art/Texture.png" \
+  --keep-from dl/<downloaded package>.zip \
+  --out out/dh8d.zip
+```
+
+`--keep-from` copies every entry in that archive **except** the albedo files, so your own
+artwork always wins and the companions stay byte-identical to the vendor's.
+
+### Where the entries land
 
 ```
-../../Library/dlc/aircraft/infiniteflight-aircraft-dh8d/liveries/<livery directory>/<file name>
+android: ../../files/aircraft/infiniteflight-aircraft-dh8d/liveries/<directory>/<file>.webp
+ios:     ../../Library/dlc/aircraft/infiniteflight-aircraft-dh8d/liveries/<directory>/<file>.webp
 ```
+
+`<directory>` must come from the table in section 4 - the folder name, not the name the app
+shows.
+
+### How to tell it worked
+
+If only the baseColor had been replaced the fuselage would render as black chrome - so the
+fact that it looks clean proves the ORM and normal companions are present. A dark, mirror-like
+hull means one of the three did not land.
 
 ## 6. Import
 

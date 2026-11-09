@@ -87,31 +87,91 @@ The directory name is `Path.GetFileName(LiveryPackage.Path)` — **not** what th
 
 ## 5. Package it
 
+**Format: Multi-part (legacy shading).** 4 baseColor images across fuselage, wings, engines, gear and details — each a separate PBR material, so a partial repaint shows up as a patchwork.
+
+### Files this aircraft needs
+
+| file | dimensions | role | what to put there |
+|---|---|---|---|
+| `eng.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `fuse.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `wingLH.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `wingRH.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `wingLH (1).webp` | 4096x4096 | surface / keep | your artwork |
+
+### Option A - explicit list (copy and run)
+
 ```bash
 python tools/build_slip_package.py \
   --platform android \
   --aircraft-repo infiniteflight-aircraft-crj9 \
-  --livery-dir "<livery directory>" \
+  --livery-dir "<a directory from the table above>" \
   --texture "eng.webp=art/eng.png" \
   --texture "fuse.webp=art/fuse.png" \
   --texture "wingLH.webp=art/wingLH.png" \
   --texture "wingRH.webp=art/wingRH.png" \
-  # ship these unchanged (a solid fill also works) \
   --texture "wingLH (1).webp=art/wingLH (1).png" \
   --out out/crj9.zip
 ```
 
-Resolves to, on Android:
+### Option B - auto mode
+
+```bash
+python tools/build_slip_package.py --auto --art art/ \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-crj9 \
+  --livery-dir "<a directory from the table above>" \
+  --out out/crj9.zip
+```
+
+`--auto` reads `data/livery_files.json`, then looks for these stems in `art/`
+(`.png`, `.webp`, `.jpg` are all accepted):
 
 ```
-../../files/aircraft/infiniteflight-aircraft-crj9/liveries/<livery directory>/<file name>
+eng.png
+fuse.png
+wingLH.png
+wingLH (1).png
+wingRH.png
 ```
 
-On iOS the root differs — replace `files` with `Library/dlc`:
+### Option C - reuse the companions from an official package
+
+The `keep` rows above are not artwork: they are masks the vendor ships. Rather than
+recreating them, pull them out of an official livery package:
+
+```bash
+python tools/fetch_catalog.py --download --type AircraftLivery \
+  --match crj9 --out dl/
+python tools/build_slip_package.py \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-crj9 \
+  --livery-dir "<a directory from the table above>" \
+  --texture "eng.webp=art/eng.png" \
+  --texture "fuse.webp=art/fuse.png" \
+  --texture "wingLH.webp=art/wingLH.png" \
+  --texture "wingRH.webp=art/wingRH.png" \
+  --keep-from dl/<downloaded package>.zip \
+  --out out/crj9.zip
+```
+
+`--keep-from` copies every entry in that archive **except** the albedo files, so your own
+artwork always wins and the companions stay byte-identical to the vendor's.
+
+### Where the entries land
 
 ```
-../../Library/dlc/aircraft/infiniteflight-aircraft-crj9/liveries/<livery directory>/<file name>
+android: ../../files/aircraft/infiniteflight-aircraft-crj9/liveries/<directory>/<file>.webp
+ios:     ../../Library/dlc/aircraft/infiniteflight-aircraft-crj9/liveries/<directory>/<file>.webp
 ```
+
+`<directory>` must come from the table in section 4 - the folder name, not the name the app
+shows.
+
+### How to tell it worked
+
+Each listed file is its own material, so the repaint is all-or-nothing per part: a wing still in
+official colours means `wing_*.webp` did not land, a dark hull means the `_ORM` partner is missing.
 
 ## 6. Import
 

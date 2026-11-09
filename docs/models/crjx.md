@@ -84,11 +84,25 @@ The directory name is `Path.GetFileName(LiveryPackage.Path)` — **not** what th
 
 ## 5. Package it
 
+**Format: Multi-part (legacy shading).** 5 baseColor images across fuselage, wings, engines, gear and details — each a separate PBR material, so a partial repaint shows up as a patchwork.
+
+### Files this aircraft needs
+
+| file | dimensions | role | what to put there |
+|---|---|---|---|
+| `eng.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `fuse.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `misc.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `wingLH.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `wingRH.webp` | 2048x2048 | surface / **paint** | your artwork |
+
+### Option A - explicit list (copy and run)
+
 ```bash
 python tools/build_slip_package.py \
   --platform android \
   --aircraft-repo infiniteflight-aircraft-crjx \
-  --livery-dir "<livery directory>" \
+  --livery-dir "<a directory from the table above>" \
   --texture "eng.webp=art/eng.png" \
   --texture "fuse.webp=art/fuse.png" \
   --texture "misc.webp=art/misc.png" \
@@ -97,17 +111,41 @@ python tools/build_slip_package.py \
   --out out/crjx.zip
 ```
 
-Resolves to, on Android:
+### Option B - auto mode
+
+```bash
+python tools/build_slip_package.py --auto --art art/ \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-crjx \
+  --livery-dir "<a directory from the table above>" \
+  --out out/crjx.zip
+```
+
+`--auto` reads `data/livery_files.json`, then looks for these stems in `art/`
+(`.png`, `.webp`, `.jpg` are all accepted):
 
 ```
-../../files/aircraft/infiniteflight-aircraft-crjx/liveries/<livery directory>/<file name>
+eng.png
+fuse.png
+misc.png
+wingLH.png
+wingRH.png
 ```
 
-On iOS the root differs — replace `files` with `Library/dlc`:
+### Where the entries land
 
 ```
-../../Library/dlc/aircraft/infiniteflight-aircraft-crjx/liveries/<livery directory>/<file name>
+android: ../../files/aircraft/infiniteflight-aircraft-crjx/liveries/<directory>/<file>.webp
+ios:     ../../Library/dlc/aircraft/infiniteflight-aircraft-crjx/liveries/<directory>/<file>.webp
 ```
+
+`<directory>` must come from the table in section 4 - the folder name, not the name the app
+shows.
+
+### How to tell it worked
+
+Each listed file is its own material, so the repaint is all-or-nothing per part: a wing still in
+official colours means `wing_*.webp` did not land, a dark hull means the `_ORM` partner is missing.
 
 ## 6. Import
 

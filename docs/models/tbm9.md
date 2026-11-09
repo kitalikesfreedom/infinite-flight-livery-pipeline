@@ -91,17 +91,35 @@ The directory name is `Path.GetFileName(LiveryPackage.Path)` — **not** what th
 
 ## 5. Package it
 
+**Format: Multi-part (legacy shading).** 5 baseColor images across fuselage, wings, engines, gear and details — each a separate PBR material, so a partial repaint shows up as a patchwork.
+
+### Files this aircraft needs
+
+| file | dimensions | role | what to put there |
+|---|---|---|---|
+| `fuse.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `fuse2.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `tail.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `wingLH.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `wingRH.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `fuse2_ORM.webp` | 2048x2048 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `fuse_ORM.webp` | 2048x2048 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `tail_ORM.webp` | 2048x2048 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `wingLH_ORM.webp` | 2048x2048 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `wingRH_ORM.webp` | 2048x2048 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+
+### Option A - explicit list (copy and run)
+
 ```bash
 python tools/build_slip_package.py \
   --platform android \
   --aircraft-repo infiniteflight-aircraft-tbm9 \
-  --livery-dir "<livery directory>" \
+  --livery-dir "<a directory from the table above>" \
   --texture "fuse.webp=art/fuse.png" \
   --texture "fuse2.webp=art/fuse2.png" \
   --texture "tail.webp=art/tail.png" \
   --texture "wingLH.webp=art/wingLH.png" \
   --texture "wingRH.webp=art/wingRH.png" \
-  # ship these unchanged (a solid fill also works) \
   --texture "fuse2_ORM.webp=art/fuse2_ORM.png" \
   --texture "fuse_ORM.webp=art/fuse_ORM.png" \
   --texture "tail_ORM.webp=art/tail_ORM.png" \
@@ -110,17 +128,70 @@ python tools/build_slip_package.py \
   --out out/tbm9.zip
 ```
 
-Resolves to, on Android:
+### Option B - auto mode
+
+```bash
+python tools/build_slip_package.py --auto --art art/ \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-tbm9 \
+  --livery-dir "<a directory from the table above>" \
+  --out out/tbm9.zip
+```
+
+`--auto` reads `data/livery_files.json`, then looks for these stems in `art/`
+(`.png`, `.webp`, `.jpg` are all accepted):
 
 ```
-../../files/aircraft/infiniteflight-aircraft-tbm9/liveries/<livery directory>/<file name>
+fuse.png
+fuse2.png
+fuse2_ORM.png
+fuse_ORM.png
+tail.png
+tail_ORM.png
+wingLH.png
+wingLH_ORM.png
+wingRH.png
+wingRH_ORM.png
 ```
 
-On iOS the root differs — replace `files` with `Library/dlc`:
+### Option C - reuse the companions from an official package
+
+The `keep` rows above are not artwork: they are masks the vendor ships. Rather than
+recreating them, pull them out of an official livery package:
+
+```bash
+python tools/fetch_catalog.py --download --type AircraftLivery \
+  --match tbm9 --out dl/
+python tools/build_slip_package.py \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-tbm9 \
+  --livery-dir "<a directory from the table above>" \
+  --texture "fuse.webp=art/fuse.png" \
+  --texture "fuse2.webp=art/fuse2.png" \
+  --texture "tail.webp=art/tail.png" \
+  --texture "wingLH.webp=art/wingLH.png" \
+  --texture "wingRH.webp=art/wingRH.png" \
+  --keep-from dl/<downloaded package>.zip \
+  --out out/tbm9.zip
+```
+
+`--keep-from` copies every entry in that archive **except** the albedo files, so your own
+artwork always wins and the companions stay byte-identical to the vendor's.
+
+### Where the entries land
 
 ```
-../../Library/dlc/aircraft/infiniteflight-aircraft-tbm9/liveries/<livery directory>/<file name>
+android: ../../files/aircraft/infiniteflight-aircraft-tbm9/liveries/<directory>/<file>.webp
+ios:     ../../Library/dlc/aircraft/infiniteflight-aircraft-tbm9/liveries/<directory>/<file>.webp
 ```
+
+`<directory>` must come from the table in section 4 - the folder name, not the name the app
+shows.
+
+### How to tell it worked
+
+Each listed file is its own material, so the repaint is all-or-nothing per part: a wing still in
+official colours means `wing_*.webp` did not land, a dark hull means the `_ORM` partner is missing.
 
 ## 6. Import
 

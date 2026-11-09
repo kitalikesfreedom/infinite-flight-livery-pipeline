@@ -104,11 +104,25 @@ The directory name is `Path.GetFileName(LiveryPackage.Path)` — **not** what th
 
 ## 5. Package it
 
+**Format: Multi-part (legacy shading).** 5 baseColor images across fuselage, wings, engines, gear and details — each a separate PBR material, so a partial repaint shows up as a patchwork.
+
+### Files this aircraft needs
+
+| file | dimensions | role | what to put there |
+|---|---|---|---|
+| `Texture_01.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `Texture_02.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `Texture_03.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `Texture_04.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `Texture_05.webp` | 2048x2048 | surface / **paint** | your artwork |
+
+### Option A - explicit list (copy and run)
+
 ```bash
 python tools/build_slip_package.py \
   --platform android \
   --aircraft-repo infiniteflight-aircraft-bcs3 \
-  --livery-dir "<livery directory>" \
+  --livery-dir "<a directory from the table above>" \
   --texture "Texture_01.webp=art/Texture_01.png" \
   --texture "Texture_02.webp=art/Texture_02.png" \
   --texture "Texture_03.webp=art/Texture_03.png" \
@@ -117,17 +131,41 @@ python tools/build_slip_package.py \
   --out out/bcs3.zip
 ```
 
-Resolves to, on Android:
+### Option B - auto mode
+
+```bash
+python tools/build_slip_package.py --auto --art art/ \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-bcs3 \
+  --livery-dir "<a directory from the table above>" \
+  --out out/bcs3.zip
+```
+
+`--auto` reads `data/livery_files.json`, then looks for these stems in `art/`
+(`.png`, `.webp`, `.jpg` are all accepted):
 
 ```
-../../files/aircraft/infiniteflight-aircraft-bcs3/liveries/<livery directory>/<file name>
+Texture_01.png
+Texture_02.png
+Texture_03.png
+Texture_04.png
+Texture_05.png
 ```
 
-On iOS the root differs — replace `files` with `Library/dlc`:
+### Where the entries land
 
 ```
-../../Library/dlc/aircraft/infiniteflight-aircraft-bcs3/liveries/<livery directory>/<file name>
+android: ../../files/aircraft/infiniteflight-aircraft-bcs3/liveries/<directory>/<file>.webp
+ios:     ../../Library/dlc/aircraft/infiniteflight-aircraft-bcs3/liveries/<directory>/<file>.webp
 ```
+
+`<directory>` must come from the table in section 4 - the folder name, not the name the app
+shows.
+
+### How to tell it worked
+
+Each listed file is its own material, so the repaint is all-or-nothing per part: a wing still in
+official colours means `wing_*.webp` did not land, a dark hull means the `_ORM` partner is missing.
 
 ## 6. Import
 

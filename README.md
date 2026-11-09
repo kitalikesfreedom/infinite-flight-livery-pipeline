@@ -141,6 +141,11 @@ One line instead of eleven for A321neo, instead of twenty for A320neo. It tells 
 could not match, and `--fill-orm` / `--fill-normal` synthesise the two PBR companions if you have no
 artwork for them.
 
+**The list is per aircraft, not a template.** A C172 wants five differently named part files, an
+A321neo wants eleven, an A320 wants one plus two synthesised companions. Every recipe, with
+dimensions and the trap specific to that format, is in
+[packaging-matrix.md](docs/models/packaging-matrix.md) and on each aircraft's own page.
+
 ### ④ Import
 
 1. Open the app → **Scenery Editor**
@@ -174,7 +179,8 @@ docs/
   troubleshooting.md     black chrome, one-shot repaints, silent failures, dead ends
   data-provenance.md     how the 65 aircraft pages were generated
   models/index.md        all 65 aircraft with file counts
-  models/<aircraft>.md   one page per aircraft
+  models/packaging-matrix.md  every aircraft's recipe side by side
+  models/<aircraft>.md   one page per aircraft, with the full command
 tools/
   build_slip_package.py    textures → importable zip (the core tool)
   probe_matrix.py          two-round colour/number probes for unknown paths or files

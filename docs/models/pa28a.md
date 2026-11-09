@@ -99,17 +99,43 @@ The directory name is `Path.GetFileName(LiveryPackage.Path)` — **not** what th
 
 ## 5. Package it
 
+**Format: Multi-part (legacy shading).** 5 baseColor images across fuselage, wings, engines, gear and details — each a separate PBR material, so a partial repaint shows up as a patchwork.
+
+### Files this aircraft needs
+
+| file | dimensions | role | what to put there |
+|---|---|---|---|
+| `M_Fuselage_1_basecolor.webp` | 4096x4096 | surface / **paint** | your artwork |
+| `M_Fuselage_2_basecolor.webp` | 4096x4096 | surface / **paint** | your artwork |
+| `M_Fuselage_3_basecolor.webp` | 4096x4096 | surface / **paint** | your artwork |
+| `M_Fuselage_4_basecolor.webp` | 4096x4096 | surface / **paint** | your artwork |
+| `M_Propeller_basecolor.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `M_Fuselage_1_emissive.webp` | 2048x2048 | surface / keep | your artwork |
+| `M_Fuselage_1_normal.webp` | 2048x2048 | surface / keep | your artwork |
+| `M_Fuselage_1_orm.webp` | 1024x1024 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `M_Fuselage_2_emissive.webp` | 2048x2048 | surface / keep | your artwork |
+| `M_Fuselage_2_normal.webp` | 2048x2048 | surface / keep | your artwork |
+| `M_Fuselage_2_orm.webp` | 1024x1024 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `M_Fuselage_3_emissive.webp` | 2048x2048 | surface / keep | your artwork |
+| `M_Fuselage_3_normal.webp` | 2048x2048 | surface / keep | your artwork |
+| `M_Fuselage_3_orm.webp` | 1024x1024 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `M_Fuselage_4_normal.webp` | 2048x2048 | surface / keep | your artwork |
+| `M_Fuselage_4_orm.webp` | 1024x1024 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `M_Propeller_normal.webp` | 2048x2048 | surface / keep | your artwork |
+| `M_Propeller_orm.webp` | 1024x1024 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+
+### Option A - explicit list (copy and run)
+
 ```bash
 python tools/build_slip_package.py \
   --platform android \
   --aircraft-repo infiniteflight-aircraft-pa28a \
-  --livery-dir "<livery directory>" \
+  --livery-dir "<a directory from the table above>" \
   --texture "M_Fuselage_1_basecolor.webp=art/M_Fuselage_1_basecolor.png" \
   --texture "M_Fuselage_2_basecolor.webp=art/M_Fuselage_2_basecolor.png" \
   --texture "M_Fuselage_3_basecolor.webp=art/M_Fuselage_3_basecolor.png" \
   --texture "M_Fuselage_4_basecolor.webp=art/M_Fuselage_4_basecolor.png" \
   --texture "M_Propeller_basecolor.webp=art/M_Propeller_basecolor.png" \
-  # ship these unchanged (a solid fill also works) \
   --texture "M_Fuselage_1_emissive.webp=art/M_Fuselage_1_emissive.png" \
   --texture "M_Fuselage_1_normal.webp=art/M_Fuselage_1_normal.png" \
   --texture "M_Fuselage_1_orm.webp=art/M_Fuselage_1_orm.png" \
@@ -126,17 +152,78 @@ python tools/build_slip_package.py \
   --out out/pa28a.zip
 ```
 
-Resolves to, on Android:
+### Option B - auto mode
+
+```bash
+python tools/build_slip_package.py --auto --art art/ \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-pa28a \
+  --livery-dir "<a directory from the table above>" \
+  --out out/pa28a.zip
+```
+
+`--auto` reads `data/livery_files.json`, then looks for these stems in `art/`
+(`.png`, `.webp`, `.jpg` are all accepted):
 
 ```
-../../files/aircraft/infiniteflight-aircraft-pa28a/liveries/<livery directory>/<file name>
+M_Fuselage_1_basecolor.png
+M_Fuselage_1_emissive.png
+M_Fuselage_1_normal.png
+M_Fuselage_1_orm.png
+M_Fuselage_2_basecolor.png
+M_Fuselage_2_emissive.png
+M_Fuselage_2_normal.png
+M_Fuselage_2_orm.png
+M_Fuselage_3_basecolor.png
+M_Fuselage_3_emissive.png
+M_Fuselage_3_normal.png
+M_Fuselage_3_orm.png
+M_Fuselage_4_basecolor.png
+M_Fuselage_4_normal.png
+M_Fuselage_4_orm.png
+M_Propeller_basecolor.png
+M_Propeller_normal.png
+M_Propeller_orm.png
 ```
 
-On iOS the root differs — replace `files` with `Library/dlc`:
+### Option C - reuse the companions from an official package
+
+The `keep` rows above are not artwork: they are masks the vendor ships. Rather than
+recreating them, pull them out of an official livery package:
+
+```bash
+python tools/fetch_catalog.py --download --type AircraftLivery \
+  --match pa28a --out dl/
+python tools/build_slip_package.py \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-pa28a \
+  --livery-dir "<a directory from the table above>" \
+  --texture "M_Fuselage_1_basecolor.webp=art/M_Fuselage_1_basecolor.png" \
+  --texture "M_Fuselage_2_basecolor.webp=art/M_Fuselage_2_basecolor.png" \
+  --texture "M_Fuselage_3_basecolor.webp=art/M_Fuselage_3_basecolor.png" \
+  --texture "M_Fuselage_4_basecolor.webp=art/M_Fuselage_4_basecolor.png" \
+  --texture "M_Propeller_basecolor.webp=art/M_Propeller_basecolor.png" \
+  --keep-from dl/<downloaded package>.zip \
+  --out out/pa28a.zip
+```
+
+`--keep-from` copies every entry in that archive **except** the albedo files, so your own
+artwork always wins and the companions stay byte-identical to the vendor's.
+
+### Where the entries land
 
 ```
-../../Library/dlc/aircraft/infiniteflight-aircraft-pa28a/liveries/<livery directory>/<file name>
+android: ../../files/aircraft/infiniteflight-aircraft-pa28a/liveries/<directory>/<file>.webp
+ios:     ../../Library/dlc/aircraft/infiniteflight-aircraft-pa28a/liveries/<directory>/<file>.webp
 ```
+
+`<directory>` must come from the table in section 4 - the folder name, not the name the app
+shows.
+
+### How to tell it worked
+
+Each listed file is its own material, so the repaint is all-or-nothing per part: a wing still in
+official colours means `wing_*.webp` did not land, a dark hull means the `_ORM` partner is missing.
 
 ## 6. Import
 

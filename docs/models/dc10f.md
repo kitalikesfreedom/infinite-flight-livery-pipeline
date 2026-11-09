@@ -94,18 +94,43 @@ The directory name is `Path.GetFileName(LiveryPackage.Path)` — **not** what th
 
 ## 5. Package it
 
+**Format: Multi-part (legacy shading).** 6 baseColor images across fuselage, wings, engines, gear and details — each a separate PBR material, so a partial repaint shows up as a patchwork.
+
+### Files this aircraft needs
+
+| file | dimensions | role | what to put there |
+|---|---|---|---|
+| `engine.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `fuse.webp` | 4096x4096 | surface / **paint** | your artwork |
+| `misc.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `tail.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `wingLH.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `wingRH.webp` | 2048x2048 | surface / **paint** | your artwork |
+| `engine_ORM.webp` | 2048x2048 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `fuse_E.webp` | 2048x2048 | emissive / keep | ship as-is unless you want glowing panels |
+| `fuse_Emissive.webp` | 2048x2048 | surface / keep | your artwork |
+| `fuse_N.webp` | 2048x2048 | normal / keep | solid `(128,128,255)` - flat normal |
+| `fuse_ORM.webp` | 4096x4096 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `misc_ORM.webp` | 2048x2048 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `tail_E.webp` | 2048x2048 | emissive / keep | ship as-is unless you want glowing panels |
+| `tail_Emissive.webp` | 2048x2048 | surface / keep | your artwork |
+| `tail_ORM.webp` | 2048x2048 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `wingLH_ORM.webp` | 2048x2048 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+| `wingRH_ORM.webp` | 1024x1024 | orm / keep | solid `(255,200,0)` - no occlusion, fully rough, non-metal |
+
+### Option A - explicit list (copy and run)
+
 ```bash
 python tools/build_slip_package.py \
   --platform android \
   --aircraft-repo infiniteflight-aircraft-dc10f \
-  --livery-dir "<livery directory>" \
+  --livery-dir "<a directory from the table above>" \
   --texture "engine.webp=art/engine.png" \
   --texture "fuse.webp=art/fuse.png" \
   --texture "misc.webp=art/misc.png" \
   --texture "tail.webp=art/tail.png" \
   --texture "wingLH.webp=art/wingLH.png" \
   --texture "wingRH.webp=art/wingRH.png" \
-  # ship these unchanged (a solid fill also works) \
   --texture "engine_ORM.webp=art/engine_ORM.png" \
   --texture "fuse_E.webp=art/fuse_E.png" \
   --texture "fuse_Emissive.webp=art/fuse_Emissive.png" \
@@ -120,17 +145,78 @@ python tools/build_slip_package.py \
   --out out/dc10f.zip
 ```
 
-Resolves to, on Android:
+### Option B - auto mode
+
+```bash
+python tools/build_slip_package.py --auto --art art/ \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-dc10f \
+  --livery-dir "<a directory from the table above>" \
+  --out out/dc10f.zip
+```
+
+`--auto` reads `data/livery_files.json`, then looks for these stems in `art/`
+(`.png`, `.webp`, `.jpg` are all accepted):
 
 ```
-../../files/aircraft/infiniteflight-aircraft-dc10f/liveries/<livery directory>/<file name>
+engine.png
+engine_ORM.png
+fuse.png
+fuse_E.png
+fuse_Emissive.png
+fuse_N.png
+fuse_ORM.png
+misc.png
+misc_ORM.png
+tail.png
+tail_E.png
+tail_Emissive.png
+tail_ORM.png
+wingLH.png
+wingLH_ORM.png
+wingRH.png
+wingRH_ORM.png
 ```
 
-On iOS the root differs — replace `files` with `Library/dlc`:
+### Option C - reuse the companions from an official package
+
+The `keep` rows above are not artwork: they are masks the vendor ships. Rather than
+recreating them, pull them out of an official livery package:
+
+```bash
+python tools/fetch_catalog.py --download --type AircraftLivery \
+  --match dc10f --out dl/
+python tools/build_slip_package.py \
+  --platform android \
+  --aircraft-repo infiniteflight-aircraft-dc10f \
+  --livery-dir "<a directory from the table above>" \
+  --texture "engine.webp=art/engine.png" \
+  --texture "fuse.webp=art/fuse.png" \
+  --texture "misc.webp=art/misc.png" \
+  --texture "tail.webp=art/tail.png" \
+  --texture "wingLH.webp=art/wingLH.png" \
+  --texture "wingRH.webp=art/wingRH.png" \
+  --keep-from dl/<downloaded package>.zip \
+  --out out/dc10f.zip
+```
+
+`--keep-from` copies every entry in that archive **except** the albedo files, so your own
+artwork always wins and the companions stay byte-identical to the vendor's.
+
+### Where the entries land
 
 ```
-../../Library/dlc/aircraft/infiniteflight-aircraft-dc10f/liveries/<livery directory>/<file name>
+android: ../../files/aircraft/infiniteflight-aircraft-dc10f/liveries/<directory>/<file>.webp
+ios:     ../../Library/dlc/aircraft/infiniteflight-aircraft-dc10f/liveries/<directory>/<file>.webp
 ```
+
+`<directory>` must come from the table in section 4 - the folder name, not the name the app
+shows.
+
+### How to tell it worked
+
+Each listed file is its own material, so the repaint is all-or-nothing per part: a wing still in
+official colours means `wing_*.webp` did not land, a dark hull means the `_ORM` partner is missing.
 
 ## 6. Import
 
