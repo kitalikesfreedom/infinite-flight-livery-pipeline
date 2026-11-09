@@ -57,7 +57,7 @@ inventory and dimensions). Nothing in these pages is inferred from a file name.
 | [Bombardier Dash 8-Q400](dh8d.md) | `dh8d` | Legacy (single texture) | 1 | 29 | 1 | 2 |
 | [E190](e190.md) | `e190` | Multi-part (legacy shading) | 6 | 27 | 4 | 8 |
 | [E175](e75l.md) | `e75l` | Multi-part (legacy shading) | 6 | 19 | 4 | 14 |
-| [F-14](f14.md) | `f14` | Legacy (single named texture) | 1 | 4 | 1 | 1 |
+| [F-14](f14.md) | `f14` | Multi-part (legacy shading) | 11 | 4 | 1 | 11 |
 | [F-16](f16.md) | `f16` | Few-part (legacy shading) | 3 | 1 | 1 | 12 |
 | [F/A-18E Super Hornet](f18.md) | `f18` | Multi-part (legacy shading) | 5 | 11 | 4 | 13 |
 | [F-22](f22.md) | `f22` | Legacy (single named texture) | 1 | 1 | 1 | 10 |
@@ -74,9 +74,9 @@ inventory and dimensions). Nothing in these pages is inferred from a file name.
 
 ## Pipeline breakdown
 
-- **Multi-part (legacy shading)** — 35 aircraft
+- **Multi-part (legacy shading)** — 36 aircraft
 - **Legacy (single texture)** — 11 aircraft
-- **Legacy (single named texture)** — 11 aircraft
+- **Legacy (single named texture)** — 10 aircraft
 - **Few-part (legacy shading)** — 6 aircraft
 - **Modern (per-part albedo)** — 2 aircraft
 

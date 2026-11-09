@@ -57,13 +57,13 @@ specific to that format. Every row links to the full page with both copy-and-run
 | Bombardier Dash 8-Q400 | [`dh8d`](dh8d.md) | Legacy (single texture) | 2 | 1 | 128x128 / 2048x2048 | three files or black chrome |
 | E190 | [`e190`](e190.md) | Multi-part (legacy shading) | 8 | 6 | 2048x2048 | - |
 | E175 | [`e75l`](e75l.md) | Multi-part (legacy shading) | 14 | 6 | 1024x1024 / 2048x2048 / 4096x4096 | - |
-| F-14 | [`f14`](f14.md) | Legacy (single named texture) | 1 | 1 | 704x396 | - |
+| F-14 | [`f14`](f14.md) | Multi-part (legacy shading) | 11 | 11 | ? | inventory is a placeholder; using glTF references |
 | F-16 | [`f16`](f16.md) | Few-part (legacy shading) | 12 | 3 | 128x128 / 2048x2048 | inventory from the shared texture set |
 | F/A-18E Super Hornet | [`f18`](f18.md) | Multi-part (legacy shading) | 13 | 5 | 1024x1024 / 2048x2048 | - |
 | F-22 | [`f22`](f22.md) | Legacy (single named texture) | 10 | 1 | 1024x1024 / 128x128 / 2048x2048 / 256x256 | inventory from the shared texture set |
 | MD-11 | [`md11`](md11.md) | Multi-part (legacy shading) | 8 | 6 | 2048x2048 / 4096x4096 | - |
 | MD-11F | [`md11f`](md11f.md) | Multi-part (legacy shading) | 6 | 6 | 2048x2048 / 4096x4096 | - |
-| Boeing 747-SOFIA | [`nasa747`](nasa747.md) | Few-part (legacy shading) | 7 | 3 | ? | contains .ktx2 entries |
+| Boeing 747-SOFIA | [`nasa747`](nasa747.md) | Few-part (legacy shading) | 7 | 3 | ? | **KTX2 only** - needs an external encoder; contains .ktx2 entries |
 | P-38 | [`p38`](p38.md) | Multi-part (legacy shading) | 17 | 4 | 1024x1024 / 128x128 / 2048x2048 / 256x256 / 512x512 | - |
 | Piper PA28 Archer | [`pa28a`](pa28a.md) | Multi-part (legacy shading) | 18 | 5 | 1024x1024 / 2048x2048 / 4096x4096 | - |
 | Spitfire | [`spit`](spit.md) | Few-part (legacy shading) | 11 | 3 | 1024x1024 / 256x256 / 512x512 | inventory from the shared texture set |

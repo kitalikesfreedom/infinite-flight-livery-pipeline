@@ -19,6 +19,12 @@
 
 ## 1. Inventory of one official package
 
+> **KTX2 pipeline - not writable by this tool.** Every texture this aircraft loads is
+> `.ktx2`. The packager writes WebP/PNG bytes, which the renderer will not accept under
+> these file names. The inventory and the commands below document the file set and the
+> target paths; you have to encode KTX2 yourself (`basisu -ktx2`, or the KTX-Software
+> `ktx create`) and drop the result in by a route that preserves the bytes.
+
 These are the exact entries that livery package ships, at their real dimensions. The
 `paint` column marks the baseColor images — the ones you actually draw. Everything
 else is a PBR companion (`_ORM`, `_comp`, `_norm`, `_emis`) that must be present so the

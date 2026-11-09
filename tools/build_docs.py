@@ -164,7 +164,19 @@ for repo in sorted(idx):
     everything = files or (shared.get(repo) or {}).get("files") or [
         {"name": n, "size": None, "bytes": None, "kind": "?"} for n in base_colors
     ]
-    if files:
+    ktx2_only = bool(everything) and all(f["name"].lower().endswith(".ktx2") for f in everything)
+    placeholder_only = (
+        len(everything) == 1 and "placeholder" in everything[0]["name"].lower()
+    )
+    if placeholder_only:
+        # The vendor package carries a single placeholder image, so fall back to what the model
+        # actually reads - the baseColor set from its glTF.
+        everything = [
+            {"name": n, "size": None, "bytes": None, "kind": "?"}
+            for n in base_colors if not any(k in n.lower() for k in NON_AIRFRAME)
+        ]
+        inv_source = "placeholder"
+    elif files:
         inv_source = "livery"
     elif (shared.get(repo) or {}).get("files"):
         inv_source = "shared"
@@ -213,6 +225,13 @@ for repo in sorted(idx):
 
     # 1. inventory
     lines += ["## 1. Inventory of one official package", ""]
+    if ktx2_only:
+        lines.append("> **KTX2 pipeline - not writable by this tool.** Every texture this aircraft loads is")
+        lines.append("> `.ktx2`. The packager writes WebP/PNG bytes, which the renderer will not accept under")
+        lines.append("> these file names. The inventory and the commands below document the file set and the")
+        lines.append("> target paths; you have to encode KTX2 yourself (`basisu -ktx2`, or the KTX-Software")
+        lines.append("> `ktx create`) and drop the result in by a route that preserves the bytes.")
+        lines.append("")
     if inv_source == "livery":
         lines.append("These are the exact entries that livery package ships, at their real dimensions. The")
         lines.append("`paint` column marks the baseColor images — the ones you actually draw. Everything")
@@ -222,6 +241,11 @@ for repo in sorted(idx):
         lines.append("The per-livery package for this aircraft is metadata-only, so the inventory comes from")
         lines.append("the aircraft's shared texture set (`AircraftSharedLiveryFiles`) — the complete file list")
         lines.append("for the airframe, with real dimensions.")
+    elif inv_source == "placeholder":
+        lines.append("The only package this aircraft ships contains **a single 704x396 placeholder image** — it")
+        lines.append("is not a usable livery. The inventory below is therefore the `baseColor` set its glTF")
+        lines.append("actually reads, which is what a repaint has to overwrite. Dimensions are not recorded")
+        lines.append("for these entries; take them from the model's own textures.")
     else:
         lines.append("No livery package could be parsed for this aircraft, so the inventory is the model's")
         lines.append("own `baseColor` reference set taken from its glTF. Dimensions are not available here.")
@@ -372,6 +396,10 @@ for repo in sorted(idx):
     notes = []
     if legacy_fillable:
         notes.append("three files or black chrome")
+    if ktx2_only:
+        notes.append("**KTX2 only** - needs an external encoder")
+    if inv_source == "placeholder":
+        notes.append("inventory is a placeholder; using glTF references")
     if any(f["name"].lower().endswith(".ktx2") for f in everything):
         notes.append("contains .ktx2 entries")
     if inv_source == "shared":
