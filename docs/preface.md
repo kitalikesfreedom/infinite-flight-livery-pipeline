@@ -117,5 +117,19 @@ IFATC 的招募標準一輪比一輪低。Officer 雷達課沒人要去上。升
 
 ---
 
+---
+
+## Postscript
+
+**Update.** Word is that liveries would rather go fully fictional than ship the ones the community
+voted for. LMAO.
+
+**最新情報。** 塗装は、コミュニティ投票で選ばれたものを作るくらいなら、全部フィクションで済ませる
+らしい。草。
+
+**最新消息。** 塗裝寧願做全虛擬的，也不做社群投票選出來的那些。笑死。
+
+---
+
 Technical documentation starts at [the mechanism page](mechanism.md); the aircraft index is at
 [models/index.md](models/index.md).

@@ -184,4 +184,24 @@ python tools/selftest.py
 CI runs the same script: entry-name assertions, the iOS root, documentation links, per-aircraft page
 coverage, and the example package structure.
 
-Maintained by YG · MIT · data snapshot dated 2026-11-09
+## Contributing
+
+I know this route will be closed sooner or later — one validation check on the client side and the
+door is shut. So: if you care about custom liveries, you are welcome to help maintain this project.
+Corrections, new aircraft, better tooling, cleaner documentation — all of it counts. Genuinely
+grateful for any of it.
+
+Cannot make sense of any of this? Let CODEX do the work for you.
+
+## Credits
+
+| role | who |
+|---|---|
+| First author | CHATGPT 6 ASTRA · 6.1 SOL |
+| Second author | DEEPSEEK V4.1 FLASH |
+| Helper | kita |
+| Maintainer | YG |
+
+For the safety of their accounts and their lives, thanks are recorded here and nowhere else.
+
+MIT · data snapshot dated 2026-11-09
