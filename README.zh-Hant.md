@@ -175,16 +175,32 @@ CI 跑的是同一支腳本：條目名稱斷言、iOS 根路徑、文件連結�
 
 ## 素材下載
 
-工具只靠檔名與尺寸運作，這裡的東西都不是重繪的必需品。太重或不適合放進 git 的素材，放在 release。
+工具只靠檔名與尺寸運作，這裡的東西都不是重繪的必需品。二進位素材放在兩個 release，不在 git 裡。
+
+### 1. 套件全集（原始內容，4.3 GB）
+
+| archive | 內容 | 大小 |
+|---|---|---|
+| `models-all-65.zip` | 全部 65 個機型模型套件（glTF 幾何、LOD、材質定義） | 約 681 MB |
+| `liveries-all.zip` | 全部 1,259 個官方塗裝套件 | 約 1.5 GB |
+| `shared-livery-files-all.zip` | 全部 66 個共享貼圖套件（各機型的完整貼圖清單） | 約 1.9 GB |
+| `configurations-all.zip` | 全部 66 個設定套件（艙門、起落架、系統、飛行特性） | 約 1.5 MB |
+| `sounds-all.zip` | 全部 13 個音效套件 | 約 109 MB |
+
+每個壓縮檔內的結構是 `<class>/<repositoryName>/<原套件>.zip`，可以只解出某一架飛機的部分。
+
+→ **[assets-2026-11-full](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/releases/tag/assets-2026-11-full)**
+
+### 2. 素材（模板與參考，1.34 GB）
 
 | archive | 內容 | 大小 |
 |---|---|---|
 | `livery-templates.zip` | 已塗裝模板、UV 佈局圖、空白畫布、網格圖、參考算圖 | 約 741 MB |
 | `official-templates.zip` | 各機型的官方空白模板匯出（PNG + WEBP） | 約 142 MB |
-| `sample-packages.zip` | 留作參考的官方模型與塗裝套件 | 約 451 MB |
-| `manifests.zip` | 從目錄保存的套件清單 | 約 5 MB |
+| `sample-packages.zip` | 少量模型與塗裝套件，供快速參考 | 約 451 MB |
+| `manifests.zip` | 從目錄保存的套件清單 | 約 0.7 MB |
 
-→ **[assets-2026-11 發佈](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/releases/tag/assets-2026-11)**
+→ **[assets-2026-11](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/releases/tag/assets-2026-11)**
 
 ## 參與維護
 

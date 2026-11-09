@@ -207,16 +207,33 @@ coverage, and the example package structure.
 ## Asset downloads
 
 The tools work from file names and dimensions, so none of this is required to repaint anything.
-Everything too large or too original to sit in git is published as a release attachment instead:
+Everything binary lives in two releases instead of git.
+
+### 1. The complete package set (original content, 4.3 GB)
+
+| archive | contents | size |
+|---|---|---|
+| `models-all-65.zip` | all 65 aircraft model packages — glTF geometry, LODs, material definitions | ~681 MB |
+| `liveries-all.zip` | all 1,259 official livery packages | ~1.5 GB |
+| `shared-livery-files-all.zip` | all 66 shared texture sets — the complete per-airframe texture list | ~1.9 GB |
+| `configurations-all.zip` | all 66 configuration packages — doors, gear, systems, flight model | ~1.5 MB |
+| `sounds-all.zip` | all 13 sound packages | ~109 MB |
+
+Inside each archive: `<class>/<repositoryName>/<original package>.zip`, so one aircraft can be
+extracted without unpacking the rest.
+
+→ **[assets-2026-11-full](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/releases/tag/assets-2026-11-full)**
+
+### 2. Artwork (templates and references, 1.34 GB)
 
 | archive | contents | size |
 |---|---|---|
 | `livery-templates.zip` | painted templates, UV layout sheets, blank canvases, grid overlays, reference renders | ~741 MB |
 | `official-templates.zip` | official blank template exports per aircraft (PNG + WEBP) | ~142 MB |
-| `sample-packages.zip` | official model and livery packages kept for reference | ~451 MB |
-| `manifests.zip` | package manifests kept from the catalog | ~5 MB |
+| `sample-packages.zip` | a handful of model and livery packages for quick reference | ~451 MB |
+| `manifests.zip` | package manifests kept from the catalog | ~0.7 MB |
 
-→ **[assets-2026-11 release](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/releases/tag/assets-2026-11)**
+→ **[assets-2026-11](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/releases/tag/assets-2026-11)**
 
 ## Contributing
 

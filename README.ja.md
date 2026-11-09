@@ -185,17 +185,33 @@ CI も同じスクリプトを回す（エントリ名・iOS の根・ドキュ�
 
 ## 素材のダウンロード
 
-道具はファイル名と寸法だけで動くので、ここにあるものは塗装に必須ではない。git に置くには重すぎる、
-あるいは原本すぎるものは release に置いてある。
+道具はファイル名と寸法だけで動くので、ここにあるものは塗装に必須ではない。バイナリは git ではなく
+2 つのリリースに置いてある。
+
+### 1. パッケージ一式（原本、4.3 GB）
+
+| archive | 内容 | サイズ |
+|---|---|---|
+| `models-all-65.zip` | 全 65 機体のモデルパッケージ（glTF 形状・LOD・マテリアル定義） | 約 681 MB |
+| `liveries-all.zip` | 公式リバリーパッケージ全 1,259 個 | 約 1.5 GB |
+| `shared-livery-files-all.zip` | 共有テクスチャセット全 66 個（機体ごとの完全なテクスチャ一覧） | 約 1.9 GB |
+| `configurations-all.zip` | コンフィギュレーションパッケージ全 66 個（ドア・ギア・系統・飛行特性） | 約 1.5 MB |
+| `sounds-all.zip` | サウンドパッケージ全 13 個 | 約 109 MB |
+
+各アーカイブ内は `<class>/<repositoryName>/<元のパッケージ>.zip`。1 機体分だけ取り出すこともできる。
+
+→ **[assets-2026-11-full](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/releases/tag/assets-2026-11-full)**
+
+### 2. 素材（テンプレートと参考、1.34 GB）
 
 | archive | 内容 | サイズ |
 |---|---|---|
 | `livery-templates.zip` | 塗装済みテンプレート、UV 配置図、空白キャンバス、グリッド、参考レンダー | 約 741 MB |
 | `official-templates.zip` | 機体ごとの公式空白テンプレート書き出し（PNG + WEBP） | 約 142 MB |
-| `sample-packages.zip` | 参考用に保存した公式モデル／塗装パッケージ | 約 451 MB |
-| `manifests.zip` | カタログから保存したパッケージマニフェスト | 約 5 MB |
+| `sample-packages.zip` | 参照用のモデル／塗装パッケージ少量 | 約 451 MB |
+| `manifests.zip` | カタログから保存したパッケージマニフェスト | 約 0.7 MB |
 
-→ **[assets-2026-11 リリース](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/releases/tag/assets-2026-11)**
+→ **[assets-2026-11](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/releases/tag/assets-2026-11)**
 
 ## コントリビュート
 
