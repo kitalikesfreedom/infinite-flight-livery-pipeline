@@ -192,9 +192,9 @@ CI も同じスクリプトを回す（エントリ名・iOS の根・ドキュ�
 
 | 役割 | 名前 |
 |---|---|
-| 第一著者 | CHATGPT 6 ASTRA · 6.1 SOL |
-| 第二著者 | DEEPSEEK V4.1 FLASH |
-| 協力 | kita |
+| 第一著者 | ChatGPT 6 Astra & 6.1 Sol |
+| 第二著者 | DeepSeek V4.1 Flash |
+| 協力 | kita、IFATC・IFAET の有志、そして友人たち |
 | 維持 | YG |
 
 彼らのアカウントと人生の安全のために、謝意はここにだけ記す。

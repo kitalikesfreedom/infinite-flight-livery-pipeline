@@ -19,11 +19,15 @@
 | **total** | **1,482** | **~4.3 GB** |
 
 Each entry carries `packageId`, `packageKey` (`aircraft/<repo>/<class>/<id>`), `version`,
-`sizeBytes`, `sha256`, `storagePath`, a signed `downloadUrl`, `urlExpiresAt` (24 h), and a
-`metadataJson` blob holding `repositoryName`, `name`, `path`, and — for liveries — the
-`livery` object with `isProOnly`, `visibleGroups`, `allowedRoles`, `modelId`.
+`sizeBytes`, `sha256`, `storagePath`, and a metadata blob holding `repositoryName`, `name`, `path`,
+and — for liveries — the `livery` object with `isProOnly`, `visibleGroups`, `allowedRoles`, `modelId`.
 
-That `metadataJson` is why livery directories can be listed exactly instead of guessed: `path` is
+The snapshot in this repository is **trimmed**: signed `downloadUrl`s, expiry stamps and the
+build-commit blocks (author names, messages, co-author addresses) are removed, so the file carries no
+credentials and no third-party contact details. What remains is the structural data the docs are
+generated from. `tools/fetch_catalog.py` pulls the full response again when you need live URLs.
+
+That metadata is why livery directories can be listed exactly instead of guessed: `path` is
 `Aircraft/<name>/Liveries/<directory>`, and the last segment is the write target.
 
 ## 2. What was downloaded for this repository

@@ -175,6 +175,31 @@ def main() -> int:
                 break
     check("no local paths or device identifiers", not traced, ", ".join(traced[:6]))
 
+    # no credentials, tokens or signed URLs anywhere (written as classes to keep them out of this file)
+    secret_patterns = {
+        r"eyJ[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\.": "a JWT",
+        r"\bgh[pousr]_[A-Za-z0-9]{20,}": "a GitHub token",
+        r"content\.infiniteflight\.com/[A-Za-z0-9+/=_,]{12,}/": "a signed CDN URL",
+        r"[Bb]ear[e]r\s+[A-Za-z0-9._-]{20,}": "a bearer token",
+        r"(?i)(api[_-]?key|secret|passwd)\s*[:=]\s*[\"'][^\"']{12,}[\"']": "an assigned key",
+    }
+    leaked = []
+    for path in ROOT.rglob("*"):
+        if not path.is_file() or ".git" in path.parts or path.suffix in {".zip", ".png", ".webp"}:
+            continue
+        rel = str(path.relative_to(ROOT)).replace("\\", "/")
+        if rel == "tools/selftest.py":
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except (UnicodeDecodeError, OSError):
+            continue
+        for pattern, label in secret_patterns.items():
+            if re.search(pattern, text):
+                leaked.append(f"{rel} ({label})")
+                break
+    check("no credentials, tokens or signed URLs", not leaked, ", ".join(leaked[:6]))
+
     # archives must not carry build timestamps
     if demo.is_file():
         with zipfile.ZipFile(demo) as bundle:

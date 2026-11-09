@@ -51,8 +51,14 @@ def repo_of(pkg: dict) -> str | None:
 
 
 def meta(pkg: dict) -> dict:
+    """Package metadata: the raw API calls it metadataJson, the trimmed snapshot calls it metadata."""
+    raw = pkg.get("metadataJson") or pkg.get("metadata")
+    if isinstance(raw, dict):
+        return raw
+    if not raw:
+        return {}
     try:
-        return json.loads(pkg["metadataJson"])
+        return json.loads(raw)
     except Exception:  # noqa: BLE001
         return {}
 

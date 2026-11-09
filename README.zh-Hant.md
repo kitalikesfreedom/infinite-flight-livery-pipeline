@@ -181,9 +181,9 @@ CI 跑的是同一支腳本：條目名稱斷言、iOS 根路徑、文件連結�
 
 | 角色 | 名字 |
 |---|---|
-| 第一作者 | CHATGPT 6 ASTRA · 6.1 SOL |
-| 第二作者 | DEEPSEEK V4.1 FLASH |
-| 協助 | kita |
+| 第一作者 | ChatGPT 6 Astra & 6.1 Sol |
+| 第二作者 | DeepSeek V4.1 Flash |
+| 協助 | kita、一些 IFATC 與 IFAET 成員、以及朋友 |
 | 維護 | YG |
 
 為了他們的帳號與人身安全，謝意只在這裡寫一次。

@@ -211,9 +211,9 @@ Cannot make sense of any of this? Let CODEX do the work for you.
 
 | role | who |
 |---|---|
-| First author | CHATGPT 6 ASTRA · 6.1 SOL |
-| Second author | DEEPSEEK V4.1 FLASH |
-| Helper | kita |
+| First author | ChatGPT 6 Astra & 6.1 Sol |
+| Second author | DeepSeek V4.1 Flash |
+| Assistance | kita, some IFATC and IFAET members, and friends |
 | Maintainer | YG |
 
 For the safety of their accounts and their lives, thanks are recorded here and nowhere else.
