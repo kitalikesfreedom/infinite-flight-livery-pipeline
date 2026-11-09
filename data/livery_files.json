@@ -1,0 +1,5445 @@
+{
+ "infiniteflight-aircraft-a318": {
+  "files": [
+   {
+    "name": "Texture.webp",
+    "path": "Texture.webp",
+    "bytes": 228308,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Airbus - Old",
+   "path": "Aircraft/Airbus A318/Liveries/Airbus_Old",
+   "packageVersion": "25.3.34",
+   "sizeBytes": 225620,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a319": {
+  "files": [
+   {
+    "name": "Texture_Original.webp",
+    "path": "Texture_Original.webp",
+    "bytes": 671600,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture.webp",
+    "path": "Texture.webp",
+    "bytes": 257238,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Volotea Airlines",
+   "path": "Aircraft/Airbus A319/Liveries/Volotea Airlines",
+   "packageVersion": "25.3.37",
+   "sizeBytes": 913331,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a320": {
+  "files": [
+   {
+    "name": "Texture_Original.webp",
+    "path": "Texture_Original.webp",
+    "bytes": 642382,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture.webp",
+    "path": "Texture.webp",
+    "bytes": 266118,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Air India",
+   "path": "Aircraft/Airbus A320/Liveries/Air India",
+   "packageVersion": "25.3.35",
+   "sizeBytes": 892468,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a10": {
+  "files": [
+   {
+    "name": "fuselage_front.webp",
+    "path": "fuselage_front.webp",
+    "bytes": 258440,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "engine_tail_rh.webp",
+    "path": "engine_tail_rh.webp",
+    "bytes": 254008,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "gears.webp",
+    "path": "gears.webp",
+    "bytes": 380112,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wing_rh.webp",
+    "path": "wing_rh.webp",
+    "bytes": 215094,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuselage_back.webp",
+    "path": "fuselage_back.webp",
+    "bytes": 237826,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "engine_tail_lh.webp",
+    "path": "engine_tail_lh.webp",
+    "bytes": 318878,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wing_lh.webp",
+    "path": "wing_lh.webp",
+    "bytes": 214740,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "US Air Force - 188th Wing",
+   "path": "Aircraft/A-10/Liveries/188th Wing",
+   "packageVersion": "25.3.27",
+   "sizeBytes": 1880340,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a321": {
+  "files": [
+   {
+    "name": "Texture.webp",
+    "path": "Texture.webp",
+    "bytes": 596054,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Vueling",
+   "path": "Aircraft/Airbus A321/Liveries/Vueling",
+   "packageVersion": "25.3.36",
+   "sizeBytes": 585070,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a21n": {
+  "files": [
+   {
+    "name": "M_Fuselage_01_albd.webp",
+    "path": "M_Fuselage_01_albd.webp",
+    "bytes": 512314,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_03_albd.webp",
+    "path": "M_Fuselage_03_albd.webp",
+    "bytes": 446392,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_03_comp.webp",
+    "path": "M_Fuselage_03_comp.webp",
+    "bytes": 549434,
+    "kind": "composite",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_PW1100G_Right_albd.webp",
+    "path": "M_PW1100G_Right_albd.webp",
+    "bytes": 810322,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Wings_01_albd.webp",
+    "path": "M_Wings_01_albd.webp",
+    "bytes": 682408,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_LandingGear_02_albd.webp",
+    "path": "M_LandingGear_02_albd.webp",
+    "bytes": 1572238,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Wings_02_albd.webp",
+    "path": "M_Wings_02_albd.webp",
+    "bytes": 1015608,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_01_comp.webp",
+    "path": "M_Fuselage_01_comp.webp",
+    "bytes": 671688,
+    "kind": "composite",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_02_albd.webp",
+    "path": "M_Fuselage_02_albd.webp",
+    "bytes": 267238,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_02_comp.webp",
+    "path": "M_Fuselage_02_comp.webp",
+    "bytes": 479618,
+    "kind": "composite",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_PW1100G_Left_albd.webp",
+    "path": "M_PW1100G_Left_albd.webp",
+    "bytes": 810322,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   }
+  ],
+  "sample": {
+   "name": "China Airlines",
+   "path": "Liveries/China Airlines",
+   "packageVersion": "25.3.9",
+   "sizeBytes": 7798877,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a20n": {
+  "files": [
+   {
+    "name": "M_Fuselage_01_albd.webp",
+    "path": "M_Fuselage_01_albd.webp",
+    "bytes": 613086,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_PW1100G_Engine_albd.webp",
+    "path": "M_PW1100G_Engine_albd.webp",
+    "bytes": 210506,
+    "kind": "albedo",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_Fuselage_03_albd.webp",
+    "path": "M_Fuselage_03_albd.webp",
+    "bytes": 581602,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_AddObjects_comp.webp",
+    "path": "M_AddObjects_comp.webp",
+    "bytes": 593728,
+    "kind": "composite",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_LandingGear_01_albd.webp",
+    "path": "M_LandingGear_01_albd.webp",
+    "bytes": 1741858,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_03_comp.webp",
+    "path": "M_Fuselage_03_comp.webp",
+    "bytes": 482342,
+    "kind": "composite",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_PW1100G_Engine_comp.webp",
+    "path": "M_PW1100G_Engine_comp.webp",
+    "bytes": 415842,
+    "kind": "composite",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_Wings_01_albd.webp",
+    "path": "M_Wings_01_albd.webp",
+    "bytes": 694104,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_LandingGear_02_albd.webp",
+    "path": "M_LandingGear_02_albd.webp",
+    "bytes": 1637650,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Wings_02_albd.webp",
+    "path": "M_Wings_02_albd.webp",
+    "bytes": 1017440,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_01_comp.webp",
+    "path": "M_Fuselage_01_comp.webp",
+    "bytes": 712670,
+    "kind": "composite",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_02_albd.webp",
+    "path": "M_Fuselage_02_albd.webp",
+    "bytes": 285956,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_LandingGear_01_comp.webp",
+    "path": "M_LandingGear_01_comp.webp",
+    "bytes": 1157062,
+    "kind": "composite",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_PW1100G_Engine_Left_comp.webp",
+    "path": "M_PW1100G_Engine_Left_comp.webp",
+    "bytes": 415646,
+    "kind": "composite",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_Fuselage_02_comp.webp",
+    "path": "M_Fuselage_02_comp.webp",
+    "bytes": 416030,
+    "kind": "composite",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_AddObjects_albd.webp",
+    "path": "M_AddObjects_albd.webp",
+    "bytes": 317482,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Wings_02_comp.webp",
+    "path": "M_Wings_02_comp.webp",
+    "bytes": 1500376,
+    "kind": "composite",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Wings_01_comp.webp",
+    "path": "M_Wings_01_comp.webp",
+    "bytes": 1249150,
+    "kind": "composite",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_PW1100G_Engine_Left_albd.webp",
+    "path": "M_PW1100G_Engine_Left_albd.webp",
+    "bytes": 211708,
+    "kind": "albedo",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_LandingGear_02_comp.webp",
+    "path": "M_LandingGear_02_comp.webp",
+    "bytes": 1444602,
+    "kind": "composite",
+    "size": [
+     4096,
+     4096
+    ]
+   }
+  ],
+  "sample": {
+   "name": "ITA Airways",
+   "path": "Liveries/EI-HOM",
+   "packageVersion": "25.3.13",
+   "sizeBytes": 15649217,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a332": {
+  "files": [
+   {
+    "name": "Texture_11.webp",
+    "path": "Texture_11.webp",
+    "bytes": 126446,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_13.webp",
+    "path": "Texture_13.webp",
+    "bytes": 250690,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_22.webp",
+    "path": "Texture_22.webp",
+    "bytes": 140192,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_15.webp",
+    "path": "Texture_15.webp",
+    "bytes": 162192,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_12.webp",
+    "path": "Texture_12.webp",
+    "bytes": 97516,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_10.webp",
+    "path": "Texture_10.webp",
+    "bytes": 161784,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_16.webp",
+    "path": "Texture_16.webp",
+    "bytes": 180354,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "China Eastern - Skyteam",
+   "path": "Liveries/China Eastern Airlines",
+   "packageVersion": "25.3.2",
+   "sizeBytes": 1114995,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a332f": {
+  "files": [
+   {
+    "name": "UPS.webp",
+    "path": "UPS.webp",
+    "bytes": 280478,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Turkish Airlines Cargo",
+   "path": "Aircraft/Airbus A330-200F/Liveries/Turkish",
+   "packageVersion": "25.3.10",
+   "sizeBytes": 280682,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a333": {
+  "files": [
+   {
+    "name": "Texture_22_ORM.webp",
+    "path": "Texture_22_ORM.webp",
+    "bytes": 618070,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_11.webp",
+    "path": "Texture_11.webp",
+    "bytes": 144138,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_16_ORM.webp",
+    "path": "Texture_16_ORM.webp",
+    "bytes": 699556,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_11_ORM.webp",
+    "path": "Texture_11_ORM.webp",
+    "bytes": 273028,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_13.webp",
+    "path": "Texture_13.webp",
+    "bytes": 244798,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_10_ORM.webp",
+    "path": "Texture_10_ORM.webp",
+    "bytes": 385350,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_15_ORM.webp",
+    "path": "Texture_15_ORM.webp",
+    "bytes": 581696,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_22.webp",
+    "path": "Texture_22.webp",
+    "bytes": 176610,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_15.webp",
+    "path": "Texture_15.webp",
+    "bytes": 144780,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_12.webp",
+    "path": "Texture_12.webp",
+    "bytes": 87152,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_10.webp",
+    "path": "Texture_10.webp",
+    "bytes": 160664,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_12_ORM.webp",
+    "path": "Texture_12_ORM.webp",
+    "bytes": 29738,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_16.webp",
+    "path": "Texture_16.webp",
+    "bytes": 161776,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_13_ORM.webp",
+    "path": "Texture_13_ORM.webp",
+    "bytes": 714202,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Aeroflot",
+   "path": "Liveries/Aeroflot",
+   "packageVersion": "25.3.8",
+   "sizeBytes": 4417143,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a346": {
+  "files": [
+   {
+    "name": "GEN.webp",
+    "path": "GEN.webp",
+    "bytes": 289224,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Etihad Airways - Formula One",
+   "path": "Aircraft/Airbus A340-600/Liveries/Etihad",
+   "packageVersion": "25.3.13",
+   "sizeBytes": 289342,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a338": {
+  "files": [
+   {
+    "name": "Texture_11.webp",
+    "path": "Texture_11.webp",
+    "bytes": 143836,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_13.webp",
+    "path": "Texture_13.webp",
+    "bytes": 276714,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_15.webp",
+    "path": "Texture_15.webp",
+    "bytes": 149370,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_12.webp",
+    "path": "Texture_12.webp",
+    "bytes": 69724,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_10.webp",
+    "path": "Texture_10.webp",
+    "bytes": 137316,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_24.webp",
+    "path": "Texture_24.webp",
+    "bytes": 75830,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_16.webp",
+    "path": "Texture_16.webp",
+    "bytes": 163506,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_23.webp",
+    "path": "Texture_23.webp",
+    "bytes": 207302,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Kuwait Airways",
+   "path": "Liveries/Kuwait Airways",
+   "packageVersion": "25.3.4",
+   "sizeBytes": 1209654,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a35k": {
+  "files": [
+   {
+    "name": "fuse_ORM.webp",
+    "path": "fuse_ORM.webp",
+    "bytes": 141986,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "gear.webp",
+    "path": "gear.webp",
+    "bytes": 132486,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wirh.webp",
+    "path": "wirh.webp",
+    "bytes": 163756,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "belly_ORM.webp",
+    "path": "belly_ORM.webp",
+    "bytes": 197758,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "belly.webp",
+    "path": "belly.webp",
+    "bytes": 149604,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "eng.webp",
+    "path": "eng.webp",
+    "bytes": 196252,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wilh.webp",
+    "path": "wilh.webp",
+    "bytes": 168002,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "eng_ORM.webp",
+    "path": "eng_ORM.webp",
+    "bytes": 371910,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "fuse.webp",
+    "path": "fuse.webp",
+    "bytes": 116112,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "A35k.webp",
+    "path": "A35k.webp",
+    "bytes": 182790,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Virgin Atlantic",
+   "path": "Liveries/Virgin Atlantic",
+   "packageVersion": "25.3.11",
+   "sizeBytes": 1810709,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a359": {
+  "files": [
+   {
+    "name": "fuse_ORM.webp",
+    "path": "fuse_ORM.webp",
+    "bytes": 504588,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "belly_ORM.webp",
+    "path": "belly_ORM.webp",
+    "bytes": 752902,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "belly.webp",
+    "path": "belly.webp",
+    "bytes": 233350,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "eng.webp",
+    "path": "eng.webp",
+    "bytes": 187574,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "eng_ORM.webp",
+    "path": "eng_ORM.webp",
+    "bytes": 1002022,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse.webp",
+    "path": "fuse.webp",
+    "bytes": 128186,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "ITA Airways",
+   "path": "Aircraft/Airbus A350-900/Liveries/ITA Airways",
+   "packageVersion": "25.3.33",
+   "sizeBytes": 2805932,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a339": {
+  "files": [
+   {
+    "name": "Texture_11.webp",
+    "path": "Texture_11.webp",
+    "bytes": 246004,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_11_ORM.webp",
+    "path": "Texture_11_ORM.webp",
+    "bytes": 289944,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_13.webp",
+    "path": "Texture_13.webp",
+    "bytes": 489150,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_10_ORM.webp",
+    "path": "Texture_10_ORM.webp",
+    "bytes": 410094,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_15.webp",
+    "path": "Texture_15.webp",
+    "bytes": 327032,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_12.webp",
+    "path": "Texture_12.webp",
+    "bytes": 202238,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_10.webp",
+    "path": "Texture_10.webp",
+    "bytes": 302310,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_24.webp",
+    "path": "Texture_24.webp",
+    "bytes": 137000,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_24_ORM.webp",
+    "path": "Texture_24_ORM.webp",
+    "bytes": 282162,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_23_ORM.webp",
+    "path": "Texture_23_ORM.webp",
+    "bytes": 564588,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_12_ORM.webp",
+    "path": "Texture_12_ORM.webp",
+    "bytes": 213902,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_16.webp",
+    "path": "Texture_16.webp",
+    "bytes": 384282,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_23.webp",
+    "path": "Texture_23.webp",
+    "bytes": 515022,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_13_ORM.webp",
+    "path": "Texture_13_ORM.webp",
+    "bytes": 716952,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Infinite Flight - 2021",
+   "path": "Liveries/Infinite Flight 2021",
+   "packageVersion": "25.3.12",
+   "sizeBytes": 4901177,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-a388": {
+  "files": [
+   {
+    "name": "Texture_19.webp",
+    "path": "Texture_19.webp",
+    "bytes": 89484,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_38.webp",
+    "path": "Texture_38.webp",
+    "bytes": 76982,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_34_ORM.webp",
+    "path": "Texture_34_ORM.webp",
+    "bytes": 273920,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_14.webp",
+    "path": "Texture_14.webp",
+    "bytes": 74658,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_11.webp",
+    "path": "Texture_11.webp",
+    "bytes": 56984,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_14_ORM.webp",
+    "path": "Texture_14_ORM.webp",
+    "bytes": 161402,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_31_ORM.webp",
+    "path": "Texture_31_ORM.webp",
+    "bytes": 131184,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_36.webp",
+    "path": "Texture_36.webp",
+    "bytes": 80954,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_33.webp",
+    "path": "Texture_33.webp",
+    "bytes": 225620,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_38_ORM.webp",
+    "path": "Texture_38_ORM.webp",
+    "bytes": 190692,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_11_ORM.webp",
+    "path": "Texture_11_ORM.webp",
+    "bytes": 72432,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_25.webp",
+    "path": "Texture_25.webp",
+    "bytes": 224882,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_37.webp",
+    "path": "Texture_37.webp",
+    "bytes": 73150,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_13.webp",
+    "path": "Texture_13.webp",
+    "bytes": 15592,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_17.webp",
+    "path": "Texture_17.webp",
+    "bytes": 51800,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_15_ORM.webp",
+    "path": "Texture_15_ORM.webp",
+    "bytes": 129130,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_26.webp",
+    "path": "Texture_26.webp",
+    "bytes": 163896,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_15.webp",
+    "path": "Texture_15.webp",
+    "bytes": 38104,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_28_ORM.webp",
+    "path": "Texture_28_ORM.webp",
+    "bytes": 198986,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_27_ORM.webp",
+    "path": "Texture_27_ORM.webp",
+    "bytes": 72184,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_34.webp",
+    "path": "Texture_34.webp",
+    "bytes": 258966,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_32.webp",
+    "path": "Texture_32.webp",
+    "bytes": 20036,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_37_ORM.webp",
+    "path": "Texture_37_ORM.webp",
+    "bytes": 184622,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_12.webp",
+    "path": "Texture_12.webp",
+    "bytes": 49832,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_33_ORM.webp",
+    "path": "Texture_33_ORM.webp",
+    "bytes": 198986,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_31.webp",
+    "path": "Texture_31.webp",
+    "bytes": 164042,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_36_ORM.webp",
+    "path": "Texture_36_ORM.webp",
+    "bytes": 191576,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_28.webp",
+    "path": "Texture_28.webp",
+    "bytes": 224250,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_19_ORM.webp",
+    "path": "Texture_19_ORM.webp",
+    "bytes": 232200,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_26_ORM.webp",
+    "path": "Texture_26_ORM.webp",
+    "bytes": 131754,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_35.webp",
+    "path": "Texture_35.webp",
+    "bytes": 75628,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_29.webp",
+    "path": "Texture_29.webp",
+    "bytes": 259370,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_17_ORM.webp",
+    "path": "Texture_17_ORM.webp",
+    "bytes": 142980,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_12_ORM.webp",
+    "path": "Texture_12_ORM.webp",
+    "bytes": 104942,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_30_ORM.webp",
+    "path": "Texture_30_ORM.webp",
+    "bytes": 187736,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_25_ORM.webp",
+    "path": "Texture_25_ORM.webp",
+    "bytes": 189250,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_35_ORM.webp",
+    "path": "Texture_35_ORM.webp",
+    "bytes": 180134,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_27.webp",
+    "path": "Texture_27.webp",
+    "bytes": 24822,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_29_ORM.webp",
+    "path": "Texture_29_ORM.webp",
+    "bytes": 273604,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_30.webp",
+    "path": "Texture_30.webp",
+    "bytes": 224232,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_32_ORM.webp",
+    "path": "Texture_32_ORM.webp",
+    "bytes": 72018,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_13_ORM.webp",
+    "path": "Texture_13_ORM.webp",
+    "bytes": 39056,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Infinite Flight",
+   "path": "Aircraft/Airbus A380/Liveries/Infinite Flight",
+   "packageVersion": "25.3.66",
+   "sizeBytes": 5768125,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b712": {
+  "files": [
+   {
+    "name": "B717.webp",
+    "path": "B717.webp",
+    "bytes": 258450,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Blue1",
+   "path": "Aircraft/717-200/Liveries/Blue1",
+   "packageVersion": "25.3.6",
+   "sizeBytes": 258036,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b737": {
+  "files": [
+   {
+    "name": "texture.webp",
+    "path": "texture.webp",
+    "bytes": 365340,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Southwest - Illinois One",
+   "path": "Aircraft/Boeing 737-700/Liveries/Southwest Illinois",
+   "packageVersion": "25.3.31",
+   "sizeBytes": 365323,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b738": {
+  "files": [
+   {
+    "name": "texture.webp",
+    "path": "texture.webp",
+    "bytes": 388852,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Alaska Airlines - Salmon People",
+   "path": "Liveries/Alaska Salmon people",
+   "packageVersion": "25.3.6",
+   "sizeBytes": 389046,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b742": {
+  "files": [
+   {
+    "name": "Generic.webp",
+    "path": "Generic.webp",
+    "bytes": 293956,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Generic_ORM.webp",
+    "path": "Generic_ORM.webp",
+    "bytes": 359414,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Air Force One",
+   "path": "Liveries/AF1",
+   "packageVersion": "25.3.8",
+   "sizeBytes": 653048,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b744": {
+  "files": [
+   {
+    "name": "744GEN.webp",
+    "path": "744GEN.webp",
+    "bytes": 403428,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Air India",
+   "path": "Aircraft/Boeing 747-400/Liveries/Air India",
+   "packageVersion": "25.3.28",
+   "sizeBytes": 403103,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b748": {
+  "files": [
+   {
+    "name": "748GEN.webp",
+    "path": "748GEN.webp",
+    "bytes": 372326,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Boeing",
+   "path": "Aircraft/Boeing 747-8/Liveries/Boeing",
+   "packageVersion": "25.3.36",
+   "sizeBytes": 371755,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b739": {
+  "files": [
+   {
+    "name": "texture.webp",
+    "path": "texture.webp",
+    "bytes": 751186,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   }
+  ],
+  "sample": {
+   "name": "KLM - 2014",
+   "path": "Liveries/KLM 2015",
+   "packageVersion": "25.3.9",
+   "sizeBytes": 743735,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b777w": {
+  "files": [
+   {
+    "name": "b777_300er_uv8.webp",
+    "path": "b777_300er_uv8.webp",
+    "bytes": 109624,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_300er_uv1.webp",
+    "path": "b777_300er_uv1.webp",
+    "bytes": 257130,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_300er_uv6.webp",
+    "path": "b777_300er_uv6.webp",
+    "bytes": 307574,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_300er_uv2.webp",
+    "path": "b777_300er_uv2.webp",
+    "bytes": 197618,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_300er_uv5.webp",
+    "path": "b777_300er_uv5.webp",
+    "bytes": 106704,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_300er_uv4.webp",
+    "path": "b777_300er_uv4.webp",
+    "bytes": 236328,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_300er_uv3.webp",
+    "path": "b777_300er_uv3.webp",
+    "bytes": 197460,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_300er_uv7.webp",
+    "path": "b777_300er_uv7.webp",
+    "bytes": 215076,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_300er_uv11.webp",
+    "path": "b777_300er_uv11.webp",
+    "bytes": 99192,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_300er_ge90_115b.webp",
+    "path": "b777_300er_ge90_115b.webp",
+    "bytes": 180198,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_300er_uv9.webp",
+    "path": "b777_300er_uv9.webp",
+    "bytes": 309786,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Air India",
+   "path": "Aircraft/Boeing 777-300ER/Liveries/Air India",
+   "packageVersion": "25.3.20",
+   "sizeBytes": 2218357,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b763": {
+  "files": [
+   {
+    "name": "767AME.webp",
+    "path": "767AME.webp",
+    "bytes": 438260,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Air Canada",
+   "path": "Aircraft/767-300/Liveries/AirCanada",
+   "packageVersion": "25.3.38",
+   "sizeBytes": 438415,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b38m": {
+  "files": [
+   {
+    "name": "Texture_06.webp",
+    "path": "Texture_06.webp",
+    "bytes": 68390,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_14.webp",
+    "path": "Texture_14.webp",
+    "bytes": 41914,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_11.webp",
+    "path": "Texture_11.webp",
+    "bytes": 52522,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_07.webp",
+    "path": "Texture_07.webp",
+    "bytes": 43948,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_16_ORM.webp",
+    "path": "Texture_16_ORM.webp",
+    "bytes": 135784,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_07_ORM.webp",
+    "path": "Texture_07_ORM.webp",
+    "bytes": 152494,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_08_ORM.webp",
+    "path": "Texture_08_ORM.webp",
+    "bytes": 232914,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_13.webp",
+    "path": "Texture_13.webp",
+    "bytes": 48192,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_17.webp",
+    "path": "Texture_17.webp",
+    "bytes": 59318,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_08.webp",
+    "path": "Texture_08.webp",
+    "bytes": 90862,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_01_ORM.webp",
+    "path": "Texture_01_ORM.webp",
+    "bytes": 148246,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_15.webp",
+    "path": "Texture_15.webp",
+    "bytes": 52892,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_04.webp",
+    "path": "Texture_04.webp",
+    "bytes": 50302,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_03_ORM.webp",
+    "path": "Texture_03_ORM.webp",
+    "bytes": 105684,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_05_ORM.webp",
+    "path": "Texture_05_ORM.webp",
+    "bytes": 116538,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_05.webp",
+    "path": "Texture_05.webp",
+    "bytes": 24142,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_12.webp",
+    "path": "Texture_12.webp",
+    "bytes": 35950,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_18_ORM.webp",
+    "path": "Texture_18_ORM.webp",
+    "bytes": 175788,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_04_ORM.webp",
+    "path": "Texture_04_ORM.webp",
+    "bytes": 114138,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_10.webp",
+    "path": "Texture_10.webp",
+    "bytes": 41454,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_18.webp",
+    "path": "Texture_18.webp",
+    "bytes": 59266,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_02.webp",
+    "path": "Texture_02.webp",
+    "bytes": 32190,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_02_ORM.webp",
+    "path": "Texture_02_ORM.webp",
+    "bytes": 104136,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_17_ORM.webp",
+    "path": "Texture_17_ORM.webp",
+    "bytes": 174376,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_12_ORM.webp",
+    "path": "Texture_12_ORM.webp",
+    "bytes": 135168,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_16.webp",
+    "path": "Texture_16.webp",
+    "bytes": 36670,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_01.webp",
+    "path": "Texture_01.webp",
+    "bytes": 46070,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_09.webp",
+    "path": "Texture_09.webp",
+    "bytes": 47938,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_06_ORM.webp",
+    "path": "Texture_06_ORM.webp",
+    "bytes": 193488,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "Texture_03.webp",
+    "path": "Texture_03.webp",
+    "bytes": 29746,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   }
+  ],
+  "sample": {
+   "name": "N7TG",
+   "path": "Aircraft/Boeing 737 MAX 8/Liveries/N7TG",
+   "packageVersion": "25.3.36",
+   "sizeBytes": 2647036,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b77f": {
+  "files": [
+   {
+    "name": "b777_200er_02_cargo.webp",
+    "path": "b777_200er_02_cargo.webp",
+    "bytes": 314146,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "b777_200er_04_cargo_ORM.webp",
+    "path": "b777_200er_04_cargo_ORM.webp",
+    "bytes": 745256,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b777_200er_02_cargo_ORM.webp",
+    "path": "b777_200er_02_cargo_ORM.webp",
+    "bytes": 508928,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b777_200er_ge90_115b.webp",
+    "path": "b777_200er_ge90_115b.webp",
+    "bytes": 237366,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "b777_200er_uv2_ORM.webp",
+    "path": "b777_200er_uv2_ORM.webp",
+    "bytes": 462184,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b777_200er_uv3_ORM.webp",
+    "path": "b777_200er_uv3_ORM.webp",
+    "bytes": 320900,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b777_200er_uv1.webp",
+    "path": "b777_200er_uv1.webp",
+    "bytes": 454650,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "b777_200er_04_cargo.webp",
+    "path": "b777_200er_04_cargo.webp",
+    "bytes": 534442,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "b777_200er_uv6_ORM.webp",
+    "path": "b777_200er_uv6_ORM.webp",
+    "bytes": 585656,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b777_200er_uv1_ORM.webp",
+    "path": "b777_200er_uv1_ORM.webp",
+    "bytes": 537042,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b777_200er_uv3.webp",
+    "path": "b777_200er_uv3.webp",
+    "bytes": 250014,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "b777_200er_uv6.webp",
+    "path": "b777_200er_uv6.webp",
+    "bytes": 495090,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "b777_200er_ge90_115b_ORM.webp",
+    "path": "b777_200er_ge90_115b_ORM.webp",
+    "bytes": 479252,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b777_200er_uv4_ORM.webp",
+    "path": "b777_200er_uv4_ORM.webp",
+    "bytes": 427626,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b777_200er_uv4.webp",
+    "path": "b777_200er_uv4.webp",
+    "bytes": 365240,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "b777_200er_uv2.webp",
+    "path": "b777_200er_uv2.webp",
+    "bytes": 398368,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   }
+  ],
+  "sample": {
+   "name": "National Airlines",
+   "path": "Liveries/National Airlines",
+   "packageVersion": "25.3.11",
+   "sizeBytes": 7076214,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b788": {
+  "files": [
+   {
+    "name": "Texture.webp",
+    "path": "Texture.webp",
+    "bytes": 545094,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   }
+  ],
+  "sample": {
+   "name": "China Southern",
+   "path": "Aircraft/Boeing 787-8/Liveries/China Southern",
+   "packageVersion": "25.3.36",
+   "sizeBytes": 534608,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b772": {
+  "files": [
+   {
+    "name": "b777_200er_uv5_ORM.webp",
+    "path": "b777_200er_uv5_ORM.webp",
+    "bytes": 1760002,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv5.webp",
+    "path": "b777_200er_uv5.webp",
+    "bytes": 112260,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv2_ORM.webp",
+    "path": "b777_200er_uv2_ORM.webp",
+    "bytes": 1898762,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv3_ORM.webp",
+    "path": "b777_200er_uv3_ORM.webp",
+    "bytes": 1823526,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv8.webp",
+    "path": "b777_200er_uv8.webp",
+    "bytes": 106150,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv7_ORM.webp",
+    "path": "b777_200er_uv7_ORM.webp",
+    "bytes": 2339088,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv8_ORM.webp",
+    "path": "b777_200er_uv8_ORM.webp",
+    "bytes": 1395448,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv1.webp",
+    "path": "b777_200er_uv1.webp",
+    "bytes": 171290,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_rr800.webp",
+    "path": "b777_200er_rr800.webp",
+    "bytes": 93716,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv9.webp",
+    "path": "b777_200er_uv9.webp",
+    "bytes": 213760,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv6_ORM.webp",
+    "path": "b777_200er_uv6_ORM.webp",
+    "bytes": 2482204,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_rr800_ORM.webp",
+    "path": "b777_200er_rr800_ORM.webp",
+    "bytes": 2069114,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv9_ORM.webp",
+    "path": "b777_200er_uv9_ORM.webp",
+    "bytes": 2769584,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv1_ORM.webp",
+    "path": "b777_200er_uv1_ORM.webp",
+    "bytes": 2369950,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv3.webp",
+    "path": "b777_200er_uv3.webp",
+    "bytes": 127136,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv6.webp",
+    "path": "b777_200er_uv6.webp",
+    "bytes": 214968,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv7.webp",
+    "path": "b777_200er_uv7.webp",
+    "bytes": 162532,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv4_ORM.webp",
+    "path": "b777_200er_uv4_ORM.webp",
+    "bytes": 2066832,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv4.webp",
+    "path": "b777_200er_uv4.webp",
+    "bytes": 144860,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv2.webp",
+    "path": "b777_200er_uv2.webp",
+    "bytes": 162244,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "American Airlines - 1968",
+   "path": "Liveries/American3",
+   "packageVersion": "25.3.6",
+   "sizeBytes": 22454849,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b752": {
+  "files": [
+   {
+    "name": "b757_RB211.webp",
+    "path": "b757_RB211.webp",
+    "bytes": 147898,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b757_gear.webp",
+    "path": "b757_gear.webp",
+    "bytes": 195478,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b757_tail.webp",
+    "path": "b757_tail.webp",
+    "bytes": 141990,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b757_wingR.webp",
+    "path": "b757_wingR.webp",
+    "bytes": 120660,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b757_wingR_ORM.webp",
+    "path": "b757_wingR_ORM.webp",
+    "bytes": 931436,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b757_back.webp",
+    "path": "b757_back.webp",
+    "bytes": 148208,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b757_wingL.webp",
+    "path": "b757_wingL.webp",
+    "bytes": 122836,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b757_tail_ORM.webp",
+    "path": "b757_tail_ORM.webp",
+    "bytes": 581744,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b757_wingL_ORM.webp",
+    "path": "b757_wingL_ORM.webp",
+    "bytes": 964270,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b757_RB211_ORM.webp",
+    "path": "b757_RB211_ORM.webp",
+    "bytes": 675536,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b757_front.webp",
+    "path": "b757_front.webp",
+    "bytes": 138870,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b757_back_ORM.webp",
+    "path": "b757_back_ORM.webp",
+    "bytes": 420268,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "b757_front_ORM.webp",
+    "path": "b757_front_ORM.webp",
+    "bytes": 521382,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   }
+  ],
+  "sample": {
+   "name": "AVIATE",
+   "path": "Liveries/AVIATE",
+   "packageVersion": "25.3.4",
+   "sizeBytes": 5101428,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b77l": {
+  "files": [
+   {
+    "name": "b777_200er_uv5.webp",
+    "path": "b777_200er_uv5.webp",
+    "bytes": 108424,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_ge90_115b.webp",
+    "path": "b777_200er_ge90_115b.webp",
+    "bytes": 119016,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv8.webp",
+    "path": "b777_200er_uv8.webp",
+    "bytes": 257446,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "b777_200er_uv1.webp",
+    "path": "b777_200er_uv1.webp",
+    "bytes": 177330,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture.webp",
+    "path": "Texture.webp",
+    "bytes": 325450,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv9.webp",
+    "path": "b777_200er_uv9.webp",
+    "bytes": 212648,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv3.webp",
+    "path": "b777_200er_uv3.webp",
+    "bytes": 122542,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv6.webp",
+    "path": "b777_200er_uv6.webp",
+    "bytes": 229916,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv7.webp",
+    "path": "b777_200er_uv7.webp",
+    "bytes": 146276,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv4.webp",
+    "path": "b777_200er_uv4.webp",
+    "bytes": 179638,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "b777_200er_uv2.webp",
+    "path": "b777_200er_uv2.webp",
+    "bytes": 158678,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Air Austral",
+   "path": "Aircraft/Boeing 777-200LR/Liveries/Air Austral",
+   "packageVersion": "25.3.39",
+   "sizeBytes": 2035560,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b789": {
+  "files": [
+   {
+    "name": "Texture.webp",
+    "path": "Texture.webp",
+    "bytes": 600378,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_2K.webp",
+    "path": "Texture_2K.webp",
+    "bytes": 254046,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "WestJet",
+   "path": "Aircraft/Boeing 787-9/Liveries/WestJet",
+   "packageVersion": "25.3.30",
+   "sizeBytes": 836491,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-b78x": {
+  "files": [
+   {
+    "name": "Texture.webp",
+    "path": "Texture.webp",
+    "bytes": 520498,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   }
+  ],
+  "sample": {
+   "name": "British Airways",
+   "path": "Aircraft/Boeing 787-10/Liveries/British",
+   "packageVersion": "25.3.27",
+   "sizeBytes": 503165,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-bcs3": {
+  "files": [
+   {
+    "name": "Texture_04.webp",
+    "path": "Texture_04.webp",
+    "bytes": 170846,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_05.webp",
+    "path": "Texture_05.webp",
+    "bytes": 128620,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_02.webp",
+    "path": "Texture_02.webp",
+    "bytes": 237128,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_01.webp",
+    "path": "Texture_01.webp",
+    "bytes": 177960,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_03.webp",
+    "path": "Texture_03.webp",
+    "bytes": 290082,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Air Tanzania",
+   "path": "Aircraft/Airbus A220-300/Liveries/AirTanzania",
+   "packageVersion": "25.3.29",
+   "sizeBytes": 1005279,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-c17": {
+  "files": [],
+  "sample": {
+   "name": "US Air Force",
+   "path": "Aircraft/C-17/Liveries/Generic",
+   "packageVersion": "25.3.35",
+   "sizeBytes": 22,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-c130j30": {
+  "files": [
+   {
+    "name": "adtex.webp",
+    "path": "adtex.webp",
+    "bytes": 9938,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "fuselage.webp",
+    "path": "fuselage.webp",
+    "bytes": 87578,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wings.webp",
+    "path": "wings.webp",
+    "bytes": 81834,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "tail.webp",
+    "path": "tail.webp",
+    "bytes": 121036,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "adtex_E.webp",
+    "path": "adtex_E.webp",
+    "bytes": 2194,
+    "kind": "emissive",
+    "size": [
+     1024,
+     1024
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Royal Air Force of Oman",
+   "path": "Aircraft/C-130J-30/Liveries/Oman",
+   "packageVersion": "25.3.7",
+   "sizeBytes": 300956,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-c130": {
+  "files": [
+   {
+    "name": "adtex.webp",
+    "path": "adtex.webp",
+    "bytes": 6438,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "tail_ORM.webp",
+    "path": "tail_ORM.webp",
+    "bytes": 3568298,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuselage.webp",
+    "path": "fuselage.webp",
+    "bytes": 132834,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "misc_ORM.webp",
+    "path": "misc_ORM.webp",
+    "bytes": 3283420,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuselage_ORM.webp",
+    "path": "fuselage_ORM.webp",
+    "bytes": 4147432,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wings.webp",
+    "path": "wings.webp",
+    "bytes": 75128,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wings_ORM.webp",
+    "path": "wings_ORM.webp",
+    "bytes": 3468166,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "tail.webp",
+    "path": "tail.webp",
+    "bytes": 115178,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "US Navy - Blue Angels Fat Albert",
+   "path": "Aircraft/C-130H/Liveries/Blue Angels",
+   "packageVersion": "25.3.8",
+   "sizeBytes": 14671896,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-c208": {
+  "files": [
+   {
+    "name": "Texture_09.webp",
+    "path": "Texture_09.webp",
+    "bytes": 58368,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_08_N.webp",
+    "path": "Texture_08_N.webp",
+    "bytes": 1049406,
+    "kind": "normal",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_08_ORM.webp",
+    "path": "Texture_08_ORM.webp",
+    "bytes": 1643324,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_08.webp",
+    "path": "Texture_08.webp",
+    "bytes": 133352,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Cessna208.webp",
+    "path": "Cessna208.webp",
+    "bytes": 225284,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Mario's Air",
+   "path": "Aircraft/Cessna 208/Liveries/MariosAir",
+   "packageVersion": "25.3.34",
+   "sizeBytes": 3109055,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-c130j": {
+  "files": [
+   {
+    "name": "adtex.webp",
+    "path": "adtex.webp",
+    "bytes": 6578,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "tail_ORM.webp",
+    "path": "tail_ORM.webp",
+    "bytes": 3568298,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuselage.webp",
+    "path": "fuselage.webp",
+    "bytes": 87116,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuselage_ORM.webp",
+    "path": "fuselage_ORM.webp",
+    "bytes": 4147432,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wings.webp",
+    "path": "wings.webp",
+    "bytes": 59700,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wings_ORM.webp",
+    "path": "wings_ORM.webp",
+    "bytes": 3468166,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "tail.webp",
+    "path": "tail.webp",
+    "bytes": 97702,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "US Coast Guard",
+   "path": "Aircraft/C-130J/Liveries/USCG",
+   "packageVersion": "25.3.9",
+   "sizeBytes": 11329697,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-c172": {
+  "files": [
+   {
+    "name": "fuselage_01.webp",
+    "path": "fuselage_01.webp",
+    "bytes": 1191114,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuselage_02.webp",
+    "path": "fuselage_02.webp",
+    "bytes": 1049940,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "tail.webp",
+    "path": "tail.webp",
+    "bytes": 638862,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wing_lh.webp",
+    "path": "wing_lh.webp",
+    "bytes": 533424,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wing_rh.webp",
+    "path": "wing_rh.webp",
+    "bytes": 544572,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "N21UC - Sporty's Pilot Shop",
+   "path": "Aircraft/Cessna 172 2019/Liveries/Sportys Pilot Shop",
+   "packageVersion": "25.3.3",
+   "sizeBytes": 3958444,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-cl35": {
+  "files": [
+   {
+    "name": "Texture_14.webp",
+    "path": "Texture_14.webp",
+    "bytes": 171588,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_11.webp",
+    "path": "Texture_11.webp",
+    "bytes": 37582,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_14_ORM.webp",
+    "path": "Texture_14_ORM.webp",
+    "bytes": 642360,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_16_ORM.webp",
+    "path": "Texture_16_ORM.webp",
+    "bytes": 581818,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_11_ORM.webp",
+    "path": "Texture_11_ORM.webp",
+    "bytes": 77556,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_13.webp",
+    "path": "Texture_13.webp",
+    "bytes": 165356,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_10_ORM.webp",
+    "path": "Texture_10_ORM.webp",
+    "bytes": 281722,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_15_ORM.webp",
+    "path": "Texture_15_ORM.webp",
+    "bytes": 710160,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_15.webp",
+    "path": "Texture_15.webp",
+    "bytes": 197948,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_12.webp",
+    "path": "Texture_12.webp",
+    "bytes": 119060,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_10.webp",
+    "path": "Texture_10.webp",
+    "bytes": 56254,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_24.webp",
+    "path": "Texture_24.webp",
+    "bytes": 86754,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_12_ORM.webp",
+    "path": "Texture_12_ORM.webp",
+    "bytes": 407972,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_16.webp",
+    "path": "Texture_16.webp",
+    "bytes": 129404,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_23.webp",
+    "path": "Texture_23.webp",
+    "bytes": 90918,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_13_ORM.webp",
+    "path": "Texture_13_ORM.webp",
+    "bytes": 654090,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Infinite Flight",
+   "path": "Aircraft/Challenger 350/Liveries/Infnite_Flight",
+   "packageVersion": "25.3.36",
+   "sizeBytes": 4370408,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-crj2": {
+  "files": [
+   {
+    "name": "eng.webp",
+    "path": "eng.webp",
+    "bytes": 179886,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingLH.webp",
+    "path": "wingLH.webp",
+    "bytes": 117942,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingRH.webp",
+    "path": "wingRH.webp",
+    "bytes": 118020,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse.webp",
+    "path": "fuse.webp",
+    "bytes": 325804,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Air Canada Express",
+   "path": "Aircraft/CRJ-200-2018/Liveries/Air Canada Express",
+   "packageVersion": "25.3.29",
+   "sizeBytes": 740077,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-crj7": {
+  "files": [
+   {
+    "name": "eng.webp",
+    "path": "eng.webp",
+    "bytes": 196654,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingLH.webp",
+    "path": "wingLH.webp",
+    "bytes": 140512,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingRH.webp",
+    "path": "wingRH.webp",
+    "bytes": 146070,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse.webp",
+    "path": "fuse.webp",
+    "bytes": 212294,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Alaska Airlines",
+   "path": "Aircraft/CRJ-700/Liveries/Alaska Airlines",
+   "packageVersion": "25.3.30",
+   "sizeBytes": 693864,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-crj9": {
+  "files": [
+   {
+    "name": "eng.webp",
+    "path": "eng.webp",
+    "bytes": 184396,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingLH (1).webp",
+    "path": "wingLH (1).webp",
+    "bytes": 281744,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "wingLH.webp",
+    "path": "wingLH.webp",
+    "bytes": 115944,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingRH.webp",
+    "path": "wingRH.webp",
+    "bytes": 129654,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse.webp",
+    "path": "fuse.webp",
+    "bytes": 200104,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Tunisair Express",
+   "path": "Aircraft/CRJ-900/Liveries/Tunisair Express",
+   "packageVersion": "25.3.26",
+   "sizeBytes": 900723,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-crjx": {
+  "files": [
+   {
+    "name": "eng.webp",
+    "path": "eng.webp",
+    "bytes": 230154,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "misc.webp",
+    "path": "misc.webp",
+    "bytes": 249858,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingLH.webp",
+    "path": "wingLH.webp",
+    "bytes": 140654,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingRH.webp",
+    "path": "wingRH.webp",
+    "bytes": 138814,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse.webp",
+    "path": "fuse.webp",
+    "bytes": 204322,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "MyAir",
+   "path": "Aircraft/CRJ-1000/Liveries/MyAir",
+   "packageVersion": "25.3.24",
+   "sizeBytes": 961927,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-dc10f": {
+  "files": [
+   {
+    "name": "wingLH_ORM.webp",
+    "path": "wingLH_ORM.webp",
+    "bytes": 1336956,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse_Emissive.webp",
+    "path": "fuse_Emissive.webp",
+    "bytes": 10536,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "tail_ORM.webp",
+    "path": "tail_ORM.webp",
+    "bytes": 1409988,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "misc_ORM.webp",
+    "path": "misc_ORM.webp",
+    "bytes": 2583052,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse.webp",
+    "path": "fuse.webp",
+    "bytes": 336306,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "wingLH.webp",
+    "path": "wingLH.webp",
+    "bytes": 167600,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "misc.webp",
+    "path": "misc.webp",
+    "bytes": 371298,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse_ORM.webp",
+    "path": "fuse_ORM.webp",
+    "bytes": 4831432,
+    "kind": "orm",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "engine.webp",
+    "path": "engine.webp",
+    "bytes": 126974,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "tail_Emissive.webp",
+    "path": "tail_Emissive.webp",
+    "bytes": 10124,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse_N.webp",
+    "path": "fuse_N.webp",
+    "bytes": 530086,
+    "kind": "normal",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingRH_ORM.webp",
+    "path": "wingRH_ORM.webp",
+    "bytes": 430312,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "wingRH.webp",
+    "path": "wingRH.webp",
+    "bytes": 167520,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "tail_E.webp",
+    "path": "tail_E.webp",
+    "bytes": 10124,
+    "kind": "emissive",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse_E.webp",
+    "path": "fuse_E.webp",
+    "bytes": 10536,
+    "kind": "emissive",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "engine_ORM.webp",
+    "path": "engine_ORM.webp",
+    "bytes": 1222684,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "tail.webp",
+    "path": "tail.webp",
+    "bytes": 159350,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "US Air Force - KC-10 Extender",
+   "path": "Aircraft/DC-10F/Liveries/KC-10 Extender USAF",
+   "packageVersion": "25.3.16",
+   "sizeBytes": 13635342,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-dc10": {
+  "files": [
+   {
+    "name": "tail_ORM.webp",
+    "path": "tail_ORM.webp",
+    "bytes": 1418102,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse.webp",
+    "path": "fuse.webp",
+    "bytes": 377284,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "wingLH.webp",
+    "path": "wingLH.webp",
+    "bytes": 171356,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "misc.webp",
+    "path": "misc.webp",
+    "bytes": 371298,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "engine.webp",
+    "path": "engine.webp",
+    "bytes": 135512,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingRH.webp",
+    "path": "wingRH.webp",
+    "bytes": 171356,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "tail.webp",
+    "path": "tail.webp",
+    "bytes": 163260,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Omni Air International",
+   "path": "Aircraft/DC-10/Liveries/Omni Air International",
+   "packageVersion": "25.3.32",
+   "sizeBytes": 2790731,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-dh8d": {
+  "files": [
+   {
+    "name": "Texture.webp",
+    "path": "Texture.webp",
+    "bytes": 271074,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_Emissive.webp",
+    "path": "Texture_Emissive.webp",
+    "bytes": 90,
+    "kind": "surface",
+    "size": [
+     128,
+     128
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Securite Civile",
+   "path": "Aircraft/Dash-8 Q400/Liveries/Securite Civile",
+   "packageVersion": "25.3.32",
+   "sizeBytes": 270553,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-cc19": {
+  "files": [
+   {
+    "name": "fuselage.webp",
+    "path": "fuselage.webp",
+    "bytes": 3746524,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "tail_and_details.webp",
+    "path": "tail_and_details.webp",
+    "bytes": 3772468,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "wing_left.webp",
+    "path": "wing_left.webp",
+    "bytes": 1999262,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "wing_right.webp",
+    "path": "wing_right.webp",
+    "bytes": 1817620,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Red & White",
+   "path": "Aircraft/XCub/Liveries/Generic",
+   "packageVersion": "25.3.9",
+   "sizeBytes": 11336326,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-e75l": {
+  "files": [
+   {
+    "name": "Texture_19.webp",
+    "path": "Texture_19.webp",
+    "bytes": 178578,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_14(1).webp",
+    "path": "Texture_14(1).webp",
+    "bytes": 414570,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_18(1).webp",
+    "path": "Texture_18(1).webp",
+    "bytes": 471296,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_14.webp",
+    "path": "Texture_14.webp",
+    "bytes": 144676,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_16_ORM.webp",
+    "path": "Texture_16_ORM.webp",
+    "bytes": 653874,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_17.webp",
+    "path": "Texture_17.webp",
+    "bytes": 137250,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_15(1).webp",
+    "path": "Texture_15(1).webp",
+    "bytes": 577386,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_15.webp",
+    "path": "Texture_15.webp",
+    "bytes": 200036,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_17(1).webp",
+    "path": "Texture_17(1).webp",
+    "bytes": 372534,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_19(1).webp",
+    "path": "Texture_19(1).webp",
+    "bytes": 582776,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_18.webp",
+    "path": "Texture_18.webp",
+    "bytes": 178118,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_17_ORM.webp",
+    "path": "Texture_17_ORM.webp",
+    "bytes": 637954,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_16(1).webp",
+    "path": "Texture_16(1).webp",
+    "bytes": 381434,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "Texture_16.webp",
+    "path": "Texture_16.webp",
+    "bytes": 142792,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Republic Airways",
+   "path": "Aircraft/ERJ-175/Liveries/Republic_Airways",
+   "packageVersion": "25.3.26",
+   "sizeBytes": 5054292,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-f16": {
+  "files": [],
+  "sample": {
+   "name": "US Air Force",
+   "path": "Aircraft/F-16/Liveries/Generic",
+   "packageVersion": "25.3.25",
+   "sizeBytes": 22,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-f14": {
+  "files": [
+   {
+    "name": "placeholder.webp",
+    "path": "placeholder.webp",
+    "bytes": 616,
+    "kind": "surface",
+    "size": [
+     704,
+     396
+    ]
+   }
+  ],
+  "sample": {
+   "name": "US Navy - Armament",
+   "path": "Aircraft/F-14/Liveries/Armament",
+   "packageVersion": "25.3.6",
+   "sizeBytes": 293,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-f22": {
+  "files": [],
+  "sample": {
+   "name": "US Air Force",
+   "path": "Aircraft/F-22/Liveries/Generic",
+   "packageVersion": "25.3.25",
+   "sizeBytes": 22,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-e190": {
+  "files": [
+   {
+    "name": "Texture_19.webp",
+    "path": "Texture_19.webp",
+    "bytes": 162454,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_14.webp",
+    "path": "Texture_14.webp",
+    "bytes": 201958,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_16_ORM.webp",
+    "path": "Texture_16_ORM.webp",
+    "bytes": 2084284,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_17.webp",
+    "path": "Texture_17.webp",
+    "bytes": 166594,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_15.webp",
+    "path": "Texture_15.webp",
+    "bytes": 245950,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_18.webp",
+    "path": "Texture_18.webp",
+    "bytes": 162786,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_17_ORM.webp",
+    "path": "Texture_17_ORM.webp",
+    "bytes": 1977316,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_16.webp",
+    "path": "Texture_16.webp",
+    "bytes": 171776,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Buta Airways",
+   "path": "Aircraft/ERJ-190/Liveries/Buta Airways",
+   "packageVersion": "25.3.27",
+   "sizeBytes": 5171737,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-f18": {
+  "files": [
+   {
+    "name": "Texture_02_E.webp",
+    "path": "Texture_02_E.webp",
+    "bytes": 1926,
+    "kind": "emissive",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_03_E.webp",
+    "path": "Texture_03_E.webp",
+    "bytes": 25424,
+    "kind": "emissive",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_01_E.webp",
+    "path": "Texture_01_E.webp",
+    "bytes": 2160,
+    "kind": "emissive",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_01_ORM.webp",
+    "path": "Texture_01_ORM.webp",
+    "bytes": 793722,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_04.webp",
+    "path": "Texture_04.webp",
+    "bytes": 279998,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_03_ORM.webp",
+    "path": "Texture_03_ORM.webp",
+    "bytes": 1109198,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_05_ORM.webp",
+    "path": "Texture_05_ORM.webp",
+    "bytes": 982702,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_05.webp",
+    "path": "Texture_05.webp",
+    "bytes": 260176,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_04_ORM.webp",
+    "path": "Texture_04_ORM.webp",
+    "bytes": 982514,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_02.webp",
+    "path": "Texture_02.webp",
+    "bytes": 142276,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_02_ORM.webp",
+    "path": "Texture_02_ORM.webp",
+    "bytes": 787746,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Texture_01.webp",
+    "path": "Texture_01.webp",
+    "bytes": 193240,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Texture_03.webp",
+    "path": "Texture_03.webp",
+    "bytes": 237546,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "US Navy - Blue Angels 1",
+   "path": "Aircraft/F-18E Super Hornet/Liveries/Blue Angels 1",
+   "packageVersion": "25.3.33",
+   "sizeBytes": 5790923,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-nasa747": {
+  "files": [
+   {
+    "name": "74SP.ktx2",
+    "path": "74SP.ktx2",
+    "bytes": 189874,
+    "kind": "surface"
+   },
+   {
+    "name": "74SP_ORM.ktx2",
+    "path": "74SP_ORM.ktx2",
+    "bytes": 44266,
+    "kind": "orm"
+   },
+   {
+    "name": "B747_Cockpit.ktx2",
+    "path": "B747_Cockpit.ktx2",
+    "bytes": 202485,
+    "kind": "interior"
+   },
+   {
+    "name": "B747_Cockpit_ORM.ktx2",
+    "path": "B747_Cockpit_ORM.ktx2",
+    "bytes": 78087,
+    "kind": "orm"
+   },
+   {
+    "name": "B747_Glass.ktx2",
+    "path": "B747_Glass.ktx2",
+    "bytes": 1927,
+    "kind": "glass"
+   },
+   {
+    "name": "B747_Glass_ORM.ktx2",
+    "path": "B747_Glass_ORM.ktx2",
+    "bytes": 17895,
+    "kind": "orm"
+   },
+   {
+    "name": "Shadow.ktx2",
+    "path": "Shadow.ktx2",
+    "bytes": 52329,
+    "kind": "surface"
+   }
+  ],
+  "sample": {
+   "name": "SOFIA",
+   "path": "Aircraft/Boeing 747-SOFIA/Liveries/Generic",
+   "packageVersion": "25.3.9",
+   "sizeBytes": 577128,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-md11f": {
+  "files": [
+   {
+    "name": "fuse.webp",
+    "path": "fuse.webp",
+    "bytes": 413282,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "wingLH.webp",
+    "path": "wingLH.webp",
+    "bytes": 183736,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "misc.webp",
+    "path": "misc.webp",
+    "bytes": 363464,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "engine.webp",
+    "path": "engine.webp",
+    "bytes": 147444,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingRH.webp",
+    "path": "wingRH.webp",
+    "bytes": 175610,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "tail.webp",
+    "path": "tail.webp",
+    "bytes": 190472,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Centurion Air Cargo",
+   "path": "Aircraft/MD-11F/Liveries/Centurion Air Cargo",
+   "packageVersion": "25.3.15",
+   "sizeBytes": 1458128,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-spit": {
+  "files": [],
+  "sample": {
+   "name": "Royal Australian Air Force",
+   "path": "Aircraft/Spitfire/Liveries/Generic",
+   "packageVersion": "25.3.26",
+   "sizeBytes": 22,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-md11": {
+  "files": [
+   {
+    "name": "fuse_ORM.webp",
+    "path": "fuse_ORM.webp",
+    "bytes": 11826562,
+    "kind": "orm",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "misc.webp",
+    "path": "misc.webp",
+    "bytes": 363464,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingLH.webp",
+    "path": "wingLH.webp",
+    "bytes": 194686,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "engine.webp",
+    "path": "engine.webp",
+    "bytes": 158536,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingRH.webp",
+    "path": "wingRH.webp",
+    "bytes": 190516,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse.webp",
+    "path": "fuse.webp",
+    "bytes": 423896,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "tail.webp",
+    "path": "tail.webp",
+    "bytes": 184160,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "emissive.webp",
+    "path": "emissive.webp",
+    "bytes": 12208,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Saudi Arabian Government",
+   "path": "Aircraft/MD-11/Liveries/Private",
+   "packageVersion": "25.3.30",
+   "sizeBytes": 12994543,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-sr22": {
+  "files": [
+   {
+    "name": "SR22.webp",
+    "path": "SR22.webp",
+    "bytes": 108758,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Red and White",
+   "path": "Aircraft/Cirrus SR22/Liveries/Livery3",
+   "packageVersion": "25.3.30",
+   "sizeBytes": 108909,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-p38": {
+  "files": [
+   {
+    "name": "P38-tank.webp",
+    "path": "P38-tank.webp",
+    "bytes": 276,
+    "kind": "surface",
+    "size": [
+     256,
+     256
+    ]
+   },
+   {
+    "name": "P38F-01.webp",
+    "path": "P38F-01.webp",
+    "bytes": 471074,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Propeller.webp",
+    "path": "Propeller.webp",
+    "bytes": 3298,
+    "kind": "surface",
+    "size": [
+     128,
+     128
+    ]
+   },
+   {
+    "name": "P38G_Fan.webp",
+    "path": "P38G_Fan.webp",
+    "bytes": 68192,
+    "kind": "surface",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "P38G_Glass_ORM.webp",
+    "path": "P38G_Glass_ORM.webp",
+    "bytes": 169576,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "P38G_Fan_ORM.webp",
+    "path": "P38G_Fan_ORM.webp",
+    "bytes": 128544,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "P38G_Tank_N.webp",
+    "path": "P38G_Tank_N.webp",
+    "bytes": 1171092,
+    "kind": "normal",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "P38F-02.webp",
+    "path": "P38F-02.webp",
+    "bytes": 544862,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "P38G_01_ORM.webp",
+    "path": "P38G_01_ORM.webp",
+    "bytes": 261202,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "P38G_01.webp",
+    "path": "P38G_01.webp",
+    "bytes": 429892,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "P38G_02_N.webp",
+    "path": "P38G_02_N.webp",
+    "bytes": 1960660,
+    "kind": "normal",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "P38G_Glass.webp",
+    "path": "P38G_Glass.webp",
+    "bytes": 665928,
+    "kind": "glass",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "P38G_Tank.webp",
+    "path": "P38G_Tank.webp",
+    "bytes": 15716,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "P38G_01_N.webp",
+    "path": "P38G_01_N.webp",
+    "bytes": 1669322,
+    "kind": "normal",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "P38G_Tank_ORM.webp",
+    "path": "P38G_Tank_ORM.webp",
+    "bytes": 171844,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "P38G_02_ORM.webp",
+    "path": "P38G_02_ORM.webp",
+    "bytes": 257656,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "P38G_02.webp",
+    "path": "P38G_02.webp",
+    "bytes": 479752,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "US Army Air Forces - Miss Virginia",
+   "path": "Aircraft/P-38/Liveries/GlacierGirl",
+   "packageVersion": "25.3.24",
+   "sizeBytes": 8459902,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-tex2": {
+  "files": [
+   {
+    "name": "body_front.webp",
+    "path": "body_front.webp",
+    "bytes": 443176,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "body_center.webp",
+    "path": "body_center.webp",
+    "bytes": 642306,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "wing_left.webp",
+    "path": "wing_left.webp",
+    "bytes": 585326,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "wing_right.webp",
+    "path": "wing_right.webp",
+    "bytes": 577546,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "tail.webp",
+    "path": "tail.webp",
+    "bytes": 824968,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   }
+  ],
+  "sample": {
+   "name": "US Air Force",
+   "path": "Aircraft/T6 Texan II/Liveries/US Air Force",
+   "packageVersion": "25.3.14",
+   "sizeBytes": 3070668,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-tbm9": {
+  "files": [
+   {
+    "name": "fuse_ORM.webp",
+    "path": "fuse_ORM.webp",
+    "bytes": 2234304,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse2.webp",
+    "path": "fuse2.webp",
+    "bytes": 93768,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "tail_ORM.webp",
+    "path": "tail_ORM.webp",
+    "bytes": 2546724,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingLH_ORM.webp",
+    "path": "wingLH_ORM.webp",
+    "bytes": 3447728,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingLH.webp",
+    "path": "wingLH.webp",
+    "bytes": 102642,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse2_ORM.webp",
+    "path": "fuse2_ORM.webp",
+    "bytes": 3021840,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingRH.webp",
+    "path": "wingRH.webp",
+    "bytes": 82812,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "fuse.webp",
+    "path": "fuse.webp",
+    "bytes": 117160,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "tail.webp",
+    "path": "tail.webp",
+    "bytes": 131058,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "wingRH_ORM.webp",
+    "path": "wingRH_ORM.webp",
+    "bytes": 3260222,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Sea Blue",
+   "path": "Aircraft/TBM 930/Liveries/Private 5",
+   "packageVersion": "25.3.19",
+   "sizeBytes": 15039751,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "unknown": {
+  "files": [
+   {
+    "name": "M_Fuselage_01_albd.webp",
+    "path": "M_Fuselage_01_albd.webp",
+    "bytes": 512870,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_03_albd.webp",
+    "path": "M_Fuselage_03_albd.webp",
+    "bytes": 451042,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Wings_01_albd.webp",
+    "path": "M_Wings_01_albd.webp",
+    "bytes": 720994,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_LandingGear_02_albd.webp",
+    "path": "M_LandingGear_02_albd.webp",
+    "bytes": 1573312,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Engines_albd.webp",
+    "path": "M_Engines_albd.webp",
+    "bytes": 261718,
+    "kind": "albedo",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_Wings_02_albd.webp",
+    "path": "M_Wings_02_albd.webp",
+    "bytes": 1034984,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_02_albd.webp",
+    "path": "M_Fuselage_02_albd.webp",
+    "bytes": 287368,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_AddObjects_albd.webp",
+    "path": "M_AddObjects_albd.webp",
+    "bytes": 301270,
+    "kind": "albedo",
+    "size": [
+     4096,
+     4096
+    ]
+   }
+  ],
+  "sample": {
+   "name": "China Southern Airlines",
+   "path": "Liveries/China Southern Airlines",
+   "packageVersion": "25.3.1",
+   "sizeBytes": 5118963,
+   "contentType": "AircraftLivery"
+  }
+ },
+ "infiniteflight-aircraft-pa28a": {
+  "files": [
+   {
+    "name": "M_Fuselage_2_basecolor.webp",
+    "path": "M_Fuselage_2_basecolor.webp",
+    "bytes": 400984,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_4_orm.webp",
+    "path": "M_Fuselage_4_orm.webp",
+    "bytes": 474822,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "M_Fuselage_1_normal.webp",
+    "path": "M_Fuselage_1_normal.webp",
+    "bytes": 1866290,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_Fuselage_2_normal.webp",
+    "path": "M_Fuselage_2_normal.webp",
+    "bytes": 2059244,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_Fuselage_4_normal.webp",
+    "path": "M_Fuselage_4_normal.webp",
+    "bytes": 1580338,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_Fuselage_3_normal.webp",
+    "path": "M_Fuselage_3_normal.webp",
+    "bytes": 1802894,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_Propeller_orm.webp",
+    "path": "M_Propeller_orm.webp",
+    "bytes": 720834,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "M_Fuselage_4_basecolor.webp",
+    "path": "M_Fuselage_4_basecolor.webp",
+    "bytes": 314260,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Propeller_basecolor.webp",
+    "path": "M_Propeller_basecolor.webp",
+    "bytes": 255628,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_Fuselage_2_emissive.webp",
+    "path": "M_Fuselage_2_emissive.webp",
+    "bytes": 9132,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_Fuselage_1_emissive.webp",
+    "path": "M_Fuselage_1_emissive.webp",
+    "bytes": 7970,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_Fuselage_3_basecolor.webp",
+    "path": "M_Fuselage_3_basecolor.webp",
+    "bytes": 399984,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_3_orm.webp",
+    "path": "M_Fuselage_3_orm.webp",
+    "bytes": 422174,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "M_Fuselage_1_basecolor.webp",
+    "path": "M_Fuselage_1_basecolor.webp",
+    "bytes": 285226,
+    "kind": "surface",
+    "size": [
+     4096,
+     4096
+    ]
+   },
+   {
+    "name": "M_Fuselage_1_orm.webp",
+    "path": "M_Fuselage_1_orm.webp",
+    "bytes": 396362,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "M_Fuselage_2_orm.webp",
+    "path": "M_Fuselage_2_orm.webp",
+    "bytes": 314594,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "M_Fuselage_3_emissive.webp",
+    "path": "M_Fuselage_3_emissive.webp",
+    "bytes": 8398,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "M_Propeller_normal.webp",
+    "path": "M_Propeller_normal.webp",
+    "bytes": 2472084,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   }
+  ],
+  "sample": {
+   "name": "CAE Oxford Aviation Academy",
+   "path": "Liveries/04_CAE Oxford Aviation Academy",
+   "packageVersion": "25.3.12",
+   "sizeBytes": 13717950,
+   "contentType": "AircraftLivery"
+  }
+ }
+}

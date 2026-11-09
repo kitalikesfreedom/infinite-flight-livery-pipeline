@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Build output
+out/
+*.zip
+!examples/**/*.zip
+
+# Local artwork / large source material
+art/
+templates/*.psd
+*.replay
+*.ab
+*.apk
+
+# Editors
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

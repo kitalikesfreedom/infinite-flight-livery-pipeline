@@ -1,0 +1,426 @@
+{
+ "infiniteflight-aircraft-c17": {
+  "files": [
+   {
+    "name": "glass.webp",
+    "path": "glass.webp",
+    "bytes": 2070,
+    "kind": "glass",
+    "size": [
+     256,
+     256
+    ]
+   },
+   {
+    "name": "c17_ORM.webp",
+    "path": "c17_ORM.webp",
+    "bytes": 683068,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "glass_ORM.webp",
+    "path": "glass_ORM.webp",
+    "bytes": 36750,
+    "kind": "orm",
+    "size": [
+     256,
+     256
+    ]
+   },
+   {
+    "name": "c17.webp",
+    "path": "c17.webp",
+    "bytes": 173952,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Shadow.webp",
+    "path": "Shadow.webp",
+    "bytes": 2640,
+    "kind": "surface",
+    "size": [
+     128,
+     128
+    ]
+   }
+  ],
+  "sample": {
+   "name": "C-17-Shared",
+   "path": "Aircraft/C-17",
+   "packageVersion": "25.3.11",
+   "sizeBytes": 899269,
+   "contentType": "AircraftSharedLiveryFiles"
+  }
+ },
+ "infiniteflight-aircraft-spit": {
+  "files": [
+   {
+    "name": "Spitfire_Fan_ORM.webp",
+    "path": "Spitfire_Fan_ORM.webp",
+    "bytes": 113662,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "SpitfireMk8_2_ORM.webp",
+    "path": "SpitfireMk8_2_ORM.webp",
+    "bytes": 908812,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Spitfire_Glass.webp",
+    "path": "Spitfire_Glass.webp",
+    "bytes": 35514,
+    "kind": "glass",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "SpitfireMk8_2_N.webp",
+    "path": "SpitfireMk8_2_N.webp",
+    "bytes": 328948,
+    "kind": "normal",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Spitfire_Fan.webp",
+    "path": "Spitfire_Fan.webp",
+    "bytes": 234832,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "SpitfireMk8_2.webp",
+    "path": "SpitfireMk8_2.webp",
+    "bytes": 109516,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "SpitfireMk8_1_ORM.webp",
+    "path": "SpitfireMk8_1_ORM.webp",
+    "bytes": 880450,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "SpitfireMk8_1.webp",
+    "path": "SpitfireMk8_1.webp",
+    "bytes": 105948,
+    "kind": "surface",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "Shadow.webp",
+    "path": "Shadow.webp",
+    "bytes": 4820,
+    "kind": "surface",
+    "size": [
+     256,
+     256
+    ]
+   },
+   {
+    "name": "Spitfire_Glass_ORM.webp",
+    "path": "Spitfire_Glass_ORM.webp",
+    "bytes": 243166,
+    "kind": "orm",
+    "size": [
+     512,
+     512
+    ]
+   },
+   {
+    "name": "SpitfireMk8_1_N.webp",
+    "path": "SpitfireMk8_1_N.webp",
+    "bytes": 312952,
+    "kind": "normal",
+    "size": [
+     1024,
+     1024
+    ]
+   }
+  ],
+  "sample": {
+   "name": "Spitfire-Shared",
+   "path": "Aircraft/Spitfire",
+   "packageVersion": "25.3.6",
+   "sizeBytes": 3270821,
+   "contentType": "AircraftSharedLiveryFiles"
+  }
+ },
+ "infiniteflight-aircraft-f16": {
+  "files": [
+   {
+    "name": "F16C_02.webp",
+    "path": "F16C_02.webp",
+    "bytes": 227288,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "F16C_02_ORM.webp",
+    "path": "F16C_02_ORM.webp",
+    "bytes": 674918,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "F16C_Equipment.webp",
+    "path": "F16C_Equipment.webp",
+    "bytes": 148822,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "F16C_01.webp",
+    "path": "F16C_01.webp",
+    "bytes": 226462,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "F16C_01_N.webp",
+    "path": "F16C_01_N.webp",
+    "bytes": 728314,
+    "kind": "normal",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "F16C_Glass_ORM.webp",
+    "path": "F16C_Glass_ORM.webp",
+    "bytes": 323812,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "F16C_01_ORM.webp",
+    "path": "F16C_01_ORM.webp",
+    "bytes": 692908,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "F16C_Equipment_N.webp",
+    "path": "F16C_Equipment_N.webp",
+    "bytes": 346074,
+    "kind": "normal",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "F16C_Glass.webp",
+    "path": "F16C_Glass.webp",
+    "bytes": 278344,
+    "kind": "glass",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "F16C_02_N.webp",
+    "path": "F16C_02_N.webp",
+    "bytes": 621224,
+    "kind": "normal",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "F16C_Equipment_ORM.webp",
+    "path": "F16C_Equipment_ORM.webp",
+    "bytes": 608046,
+    "kind": "orm",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Shadow.webp",
+    "path": "Shadow.webp",
+    "bytes": 2452,
+    "kind": "surface",
+    "size": [
+     128,
+     128
+    ]
+   }
+  ],
+  "sample": {
+   "name": "F-16-Shared",
+   "path": "Aircraft/F-16",
+   "packageVersion": "25.3.6",
+   "sizeBytes": 4870758,
+   "contentType": "AircraftSharedLiveryFiles"
+  }
+ },
+ "infiniteflight-aircraft-f22": {
+  "files": [
+   {
+    "name": "glass.webp",
+    "path": "glass.webp",
+    "bytes": 2094,
+    "kind": "glass",
+    "size": [
+     256,
+     256
+    ]
+   },
+   {
+    "name": "Cockpit_ORM.webp",
+    "path": "Cockpit_ORM.webp",
+    "bytes": 415266,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "glass_N.webp",
+    "path": "glass_N.webp",
+    "bytes": 220,
+    "kind": "normal",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "base_ORM.webp",
+    "path": "base_ORM.webp",
+    "bytes": 749520,
+    "kind": "orm",
+    "size": [
+     1024,
+     1024
+    ]
+   },
+   {
+    "name": "base.webp",
+    "path": "base.webp",
+    "bytes": 137472,
+    "kind": "surface",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Cockpit.webp",
+    "path": "Cockpit.webp",
+    "bytes": 114038,
+    "kind": "interior",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "base_N.webp",
+    "path": "base_N.webp",
+    "bytes": 99286,
+    "kind": "normal",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "glass_ORM.webp",
+    "path": "glass_ORM.webp",
+    "bytes": 15850,
+    "kind": "orm",
+    "size": [
+     256,
+     256
+    ]
+   },
+   {
+    "name": "Cockpit_E.webp",
+    "path": "Cockpit_E.webp",
+    "bytes": 35940,
+    "kind": "emissive",
+    "size": [
+     2048,
+     2048
+    ]
+   },
+   {
+    "name": "Shadow.webp",
+    "path": "Shadow.webp",
+    "bytes": 1760,
+    "kind": "surface",
+    "size": [
+     128,
+     128
+    ]
+   }
+  ],
+  "sample": {
+   "name": "F-22-Shared",
+   "path": "Aircraft/F-22",
+   "packageVersion": "25.3.5",
+   "sizeBytes": 1555447,
+   "contentType": "AircraftSharedLiveryFiles"
+  }
+ }
+}

@@ -1,0 +1,25 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r tools/requirements.txt
+
+      - name: Byte-compile tools
+        run: python -m compileall -q tools
+
+      - name: Self-test (entry names, iOS root, docs links, example package)
+        run: python tools/selftest.py
