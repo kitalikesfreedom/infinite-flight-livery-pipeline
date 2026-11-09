@@ -47,7 +47,7 @@ VA 是消耗品，Live 才是親兒子。IFAET 的招募跟培訓根本是玄學
 | | |
 |---|---|
 | 收錄機型 | **65** —— 每型一頁，見 [docs/models/index.md](docs/models/index.md) |
-| 收錄塗裝 | **1,260** |
+| 收錄塗裝 | **1,235**（目錄共 1,260，其中 25 個對不到機型） |
 | 解析的模型套件 | **65**（681 MB）—— 掃過每個 glTF 的 `images[].uri` |
 | 解析的官方塗裝套件 | **65**（233 MB）—— 真正會被替換的檔案 |
 | 驗證環境 | 無 root、BL 上鎖、Android 16；iOS 無越獄 |
@@ -110,6 +110,18 @@ python tools/build_slip_package.py \
 
 開頭的兩個 `../` 不可省：從解壓資料夾只退一層，還留在快取目錄裡。
 `--dry-run` 可先看條目名稱而不落地。
+
+也可以完全省掉逐檔參數：把圖放進一個資料夾、檔名主體對上，讓記錄好的清冊決定這型需要哪些檔案。
+
+```bash
+python tools/build_slip_package.py --auto --art art/ \
+  --aircraft-repo infiniteflight-aircraft-a21n \
+  --livery-dir "<塗裝目錄>" \
+  --out out/a21n.zip
+```
+
+A321neo 的 11 行、A320neo 的 20 行，都變成 1 行。對不上的檔案它會告訴你；沒有圖的 PBR 配套檔
+可以用 `--fill-orm` / `--fill-normal` 合成。
 
 ### ④ 匯入
 

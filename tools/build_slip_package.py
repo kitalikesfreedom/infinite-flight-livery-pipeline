@@ -57,6 +57,51 @@ DEFAULT_SIZE = {"old": (2048, 2048), "new": (4096, 4096)}
 # Fixed timestamp for archive entries: keeps output byte-reproducible and leaks no build time.
 FIXED_DATE = (1980, 1, 1, 0, 0, 0)
 
+ROOT = Path(__file__).resolve().parent.parent
+INVENTORY = ROOT / "data" / "livery_files.json"
+IMAGE_EXTS = (".png", ".webp", ".jpg", ".jpeg")
+
+
+def auto_textures(repo: str, art_dir: Path) -> list[str]:
+    """Build the --texture list from the recorded inventory plus a folder of artwork.
+
+    The inventory is what an official livery package for that aircraft ships, so this is
+    exactly the set of files a repaint has to provide. Artwork is matched by file stem:
+    `Texture_ORM.webp` needs `art/Texture_ORM.png` (or .webp/.jpg).
+    """
+    if not INVENTORY.is_file():
+        die(f"inventory not found: {INVENTORY} (run tools/extract_liveries.py first)")
+    data = json.loads(INVENTORY.read_text(encoding="utf-8"))
+    entry = data.get(repo.strip().lower())
+    if not entry:
+        known = ", ".join(sorted(data)[:6])
+        die(f"no inventory for {repo!r}; try one of: {known} ...")
+    files = entry.get("files") or []
+    if not files:
+        die(f"inventory for {repo!r} is empty")
+
+    found: list[str] = []
+    missing: list[str] = []
+    for item in files:
+        name = item["name"]
+        stem = name.rsplit(".", 1)[0]
+        for ext in IMAGE_EXTS:
+            candidate = art_dir / f"{stem}{ext}"
+            if candidate.is_file():
+                found.append(f"{name}={candidate}")
+                break
+        else:
+            missing.append(name)
+
+    print(f"auto: {len(found)}/{len(files)} file(s) matched under {art_dir}", file=sys.stderr)
+    if missing:
+        print(f"auto: no artwork for {', '.join(missing)}", file=sys.stderr)
+        print("auto: add those files, or pass --fill-orm / --fill-normal to synthesise them",
+              file=sys.stderr)
+    if not found:
+        die("auto mode matched nothing; check the artwork folder and file stems")
+    return found
+
 
 def die(msg: str) -> "NoReturn":  # type: ignore[name-defined]
     raise SystemExit(f"error: {msg}")
@@ -178,6 +223,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--aircraft-repo", required=True, help="e.g. infiniteflight-aircraft-a320")
     parser.add_argument("--livery-dir", required=True, help="livery directory name (not the display name); see docs/models/<aircraft>.md")
     parser.add_argument("--texture", action="append", default=[], metavar="NAME[=PATH]")
+    parser.add_argument("--auto", action="store_true",
+                        help="fill --texture from data/livery_files.json and the artwork folder")
+    parser.add_argument("--art", default="art",
+                        help="artwork folder for --auto (default: art)")
     parser.add_argument("--tint", help="RRGGBB[AA]: generate a flat colour texture (probe)")
     parser.add_argument("--quality", type=int, default=92)
     parser.add_argument("--size", help="WxH; defaults per aircraft (2048^2 legacy, 4096^2 neo)")
@@ -188,6 +237,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--out", required=True)
     parser.add_argument("--dry-run", action="store_true", help="print entry names only")
     args = parser.parse_args(argv)
+
+    if args.auto:
+        if args.texture:
+            die("--auto and --texture are mutually exclusive")
+        args.texture = auto_textures(args.aircraft_repo, Path(args.art))
 
     entries = build_entries(args)
     if args.dry_run:

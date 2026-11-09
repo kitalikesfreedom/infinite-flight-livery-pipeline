@@ -58,7 +58,7 @@ for each one, measured from the official package catalog rather than guessed:
 | | |
 |---|---|
 | Aircraft documented | **65** — one page each, see [docs/models/index.md](docs/models/index.md) |
-| Named liveries catalogued | **1,260** |
+| Named liveries mapped | **1,235** — of 1,260 in the catalog; 25 have no resolvable aircraft |
 | Model packages parsed | **65** (681 MB) — glTF mined for every `images[].uri` |
 | Official livery packages parsed | **65** (233 MB) — the files a repaint actually replaces |
 | Local device condition | no root, locked bootloader, Android 16; iOS without jailbreak |
@@ -126,6 +126,20 @@ Entry names come out as the write targets:
 
 `--dry-run` prints them without writing a file. The two leading `../` are mandatory: one level up
 from the extraction folder still leaves you inside the cache.
+
+Or skip the per-file arguments entirely: drop your artwork into a folder using the same file stems
+and let the recorded inventory decide which files that aircraft needs.
+
+```bash
+python tools/build_slip_package.py --auto --art art/ \
+  --aircraft-repo infiniteflight-aircraft-a21n \
+  --livery-dir "<livery directory>" \
+  --out out/a21n.zip
+```
+
+One line instead of eleven for A321neo, instead of twenty for A320neo. It tells you which files it
+could not match, and `--fill-orm` / `--fill-normal` synthesise the two PBR companions if you have no
+artwork for them.
 
 ### ④ Import
 

@@ -59,10 +59,12 @@ from their `AircraftSharedLiveryFiles` package instead.
 textures — so texture dimensions cannot come from the model. They come from the livery packages
 (§2), which is also why `docs/models/` dimensions are measured rather than assumed.
 
-**One package has a broken key.** The catalog contains a livery with
-`packageKey = aircraft/unknown/aircraftlivery/...` (`China Southern Airlines`, 5.1 MB). The vendor's
-own manifest has an unresolved repository name. It is excluded from the per-aircraft pages because
-there is no aircraft to attach it to.
+**25 packages have a broken key.** The catalog has 1,260 livery packages, but 25 of them carry
+`packageKey = aircraft/unknown/aircraftlivery/...` — the vendor's own manifest never resolved their
+repository name. Those 25 are excluded from the per-aircraft pages (there is no aircraft to attach
+them to), which is why the documented total is **1,235 mapped liveries**, not 1,260. Names and sizes
+among them look legitimate (`China Southern Airlines`, `KLM`, `Turkish wl`, 0.2–5 MB each), so this is
+a manifest defect rather than junk data.
 
 ## 4. Known gaps in the tables
 
