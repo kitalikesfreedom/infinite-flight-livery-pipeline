@@ -6,6 +6,15 @@ English · [日本語](README.ja.md) · [繁體中文](README.zh-Hant.md)
 
 ![Example repaint](examples/a320-demo/preview.png)
 
+## What this gives you
+
+- **A measured map, not a guess.** All 65 airframes and 1,235 mapped liveries — every texture name,
+  dimension and livery folder read out of the official packages.
+- **A packager.** One command turns your artwork into the zip the airport editor imports; `--auto`
+  fills the file list from whichever aircraft you picked.
+- **Everything behind it.** 5.6 GB of models, livery packages, shared textures and templates,
+  archived in two releases.
+
 ---
 
 ## A preface, in which I stop being polite
@@ -171,6 +180,7 @@ the app away.
 ```
 README.md                  this file (English) · ja / zh-Hant translations alongside
 docs/
+  quickstart.md          five commands, and the five ways it fails silently
   preface.md             the preface, in three languages
   mechanism.md           why a zip can write into the app sandbox (with the decompiled code)
   paths-and-textures.md  path rules, pipelines, name mismatches

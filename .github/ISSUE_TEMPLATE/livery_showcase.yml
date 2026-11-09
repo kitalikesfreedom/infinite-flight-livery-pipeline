@@ -1,0 +1,54 @@
+name: Show a repaint
+description: You painted something with this pipeline — post it here
+title: "[livery] "
+labels: ["showcase"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Screenshots are the whole point of this section — they are also the fastest way to tell
+        whether a part failed to land.
+
+  - type: input
+    id: aircraft
+    attributes:
+      label: Aircraft
+      placeholder: infiniteflight-aircraft-c172
+    validations:
+      required: true
+
+  - type: input
+    id: directory
+    attributes:
+      label: Livery directory you wrote into
+      description: The folder name from section 4 of the aircraft page, not what the app shows
+      placeholder: YellowBlue
+    validations:
+      required: true
+
+  - type: textarea
+    id: shot
+    attributes:
+      label: Screenshot
+      description: Drag an image in here, ideally with the aircraft in daylight so the shading is visible
+    validations:
+      required: true
+
+  - type: dropdown
+    id: method
+    attributes:
+      label: How you built the archive
+      options:
+        - Explicit list (Option A)
+        - Auto mode (Option B)
+        - Auto mode plus --keep-from (Option C)
+        - Something else - explained below
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything surprising — parts that came out dark, dimensions that did not match, tricks worth writing into the docs
+      render: text

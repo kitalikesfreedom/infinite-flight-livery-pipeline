@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the quickstart first
+    url: https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/blob/main/docs/quickstart.md
+    about: Five commands to a repaint, plus the five ways it fails silently
+  - name: One aircraft's file list
+    url: https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/blob/main/docs/models/index.md
+    about: Every aircraft, its textures, its dimensions and its livery folder names
+  - name: All 65 recipes at once
+    url: https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/blob/main/docs/models/packaging-matrix.md
+    about: Format, file count, dimensions and the trap specific to each aircraft

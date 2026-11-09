@@ -1,0 +1,66 @@
+name: Bug report
+description: Something in the tools, the docs, or an aircraft page is wrong
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Most "nothing happened" reports come down to three things: the airport was not open in the
+        Scenery Editor, the livery **directory** name did not match the page, or the tile cache was
+        still hot. [quickstart.md](https://github.com/kitalikesfreedom/infinite-flight-livery-pipeline/blob/main/docs/quickstart.md)
+        covers all three.
+
+  - type: input
+    id: aircraft
+    attributes:
+      label: Aircraft
+      description: Repository name, or the page you were reading
+      placeholder: infiniteflight-aircraft-a320
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Android
+        - iOS
+        - Both
+        - Neither - docs or tools only
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what you got
+    validations:
+      required: true
+
+  - type: textarea
+    id: entries
+    attributes:
+      label: Archive entry names
+      description: Paste `--dry-run` output, or `unzip -l your.zip`
+      render: text
+      placeholder: |
+        ../../files/aircraft/infiniteflight-aircraft-a320/liveries/<dir>/Texture.webp
+
+  - type: input
+    id: version
+    attributes:
+      label: App version and device
+      placeholder: 26.5.1 on Android 16 / iPhone, iOS 27
+
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: Already checked
+      options:
+        - label: An airport was open in the Scenery Editor when I imported
+        - label: I ran `pm trim-caches` (or iOS clear cache) before looking again
+        - label: The livery directory name matches section 4 of that aircraft's page
+        - label: The texture dimensions match the table in section 1

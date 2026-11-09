@@ -97,6 +97,10 @@ def main() -> int:
     for name in ("README.md", "README.ja.md", "README.zh-Hant.md"):
         check(f"{name} present", (ROOT / name).is_file())
 
+    for name in ("docs/quickstart.md", "docs/mechanism.md", "docs/models/packaging-matrix.md",
+                 "docs/models/index.md", ".github/ISSUE_TEMPLATE/config.yml"):
+        check(f"{name} present", (ROOT / name).is_file())
+
     index_path = ROOT / "data" / "models_index.json"
     if index_path.is_file():
         aircraft = json.loads(index_path.read_text(encoding="utf-8"))

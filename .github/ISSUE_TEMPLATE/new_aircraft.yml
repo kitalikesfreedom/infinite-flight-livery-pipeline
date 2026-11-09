@@ -1,0 +1,50 @@
+name: Missing or wrong aircraft data
+description: An aircraft is absent, or its file list / dimensions / directory names are wrong
+title: "[data] "
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every number on those pages was measured by downloading the aircraft's model package and one
+        of its official livery packages. If something is wrong, the package data usually says why —
+        include it and the fix is quick.
+
+  - type: input
+    id: aircraft
+    attributes:
+      label: Which aircraft
+      description: Name and/or repository name
+      placeholder: Airbus A320 / infiniteflight-aircraft-a320
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong
+      options:
+        - The aircraft is missing entirely
+        - The file list is incomplete
+        - A dimension is wrong
+        - A livery directory name is wrong
+        - The packaging command fails
+        - The page claims something the flight sim does not do
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: |
+        Whatever you have — `tools/fetch_catalog.py --list --type AircraftModel --match <name>`
+        output, a `--dry-run` result, a screenshot of the in-game livery list, or the contents of an
+        official package (`unzip -l`).
+      render: text
+
+  - type: input
+    id: catalog
+    attributes:
+      label: App version you are looking at
+      placeholder: 26.5.1
