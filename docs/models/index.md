@@ -80,6 +80,44 @@ inventory and dimensions). Nothing in these pages is inferred from a file name.
 - **Few-part (legacy shading)** — 6 aircraft
 - **Modern (per-part albedo)** — 2 aircraft
 
+## Coverage: why 65 and not 67
+
+The catalog contains **67 distinct aircraft repository names**, but only
+**65** of them ship an `AircraftModel` package. The other two are accounted for:
+
+| repo | packages | what it is |
+|---|---|---|
+| `infiniteflight-aircraft-b78x-2025` | 1 package class | configuration only - `Boeing 787-10 (2026)`. It reuses the `b78x` model, shared textures and liveries, so it needs no page of its own |
+| `unknown` | 4 package classes | the vendor's own manifest lost the repository name. It holds 25 liveries, the `Piper PA28A` shared texture set and the `GroundServices` sound package, with no aircraft to attach them to |
+
+## 65 airframes, 109 variants
+
+A *model package* is one fuselage. Engine fits, wingtip devices and door configurations are not
+separate models - liveries carry a `visibleGroups` list that decides which variant they appear
+under. Across the catalog those groups number 109, and the common ones are:
+
+| group | liveries | meaning |
+|---|---|---|
+| `winglet` | 100 | wingtip fit |
+| `CFM` | 97 | engine |
+| `wingfence` | 96 | wingtip fit |
+| `NewRadio_Captain` | 83 | cockpit option |
+| `NewRadio_FirstOfficer` | 83 | cockpit option |
+| `engine_ge90_115b` | 76 | engine |
+| `GEnx` | 70 | engine |
+| `classic` | 65 | airframe generation |
+| `GE` | 64 | engine |
+| `sharklet` | 61 | wingtip fit |
+| `IAE` | 60 | engine |
+| `PW` | 59 | engine |
+| `door_plug` | 52 | door configuration |
+| `CenterGear` | 51 | landing gear |
+
+Practically: pick the airframe (one of the 65 pages), then pick a livery directory from that
+page. Whether the livery *shows up* for your engine/wingtip combination is decided by these
+groups, not by the file layout - the texture path is identical either way.
+
+
 ## Regenerate this data
 
 ```bash

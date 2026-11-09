@@ -427,6 +427,73 @@ lines += ["", "## Pipeline breakdown", ""]
 for kind, count in kinds_counter.most_common():
     lines.append(f"- **{kind}** — {count} aircraft")
 
+# ---------- coverage accounting: 65 documented out of how many repos? ----------
+catalog = json.loads((DATA / "catalog.json").read_text(encoding="utf-8"))
+repo_types: dict[str, set[str]] = {}
+for pkg in catalog:
+    parts = (pkg.get("packageKey") or "").split("/")
+    if len(parts) > 1 and parts[0] == "aircraft":
+        repo_types.setdefault(parts[1], set()).add(pkg.get("contentType"))
+documented = set(idx)
+no_model = sorted(r for r, ts in repo_types.items() if r not in documented and "AircraftModel" not in ts)
+unknown_types = Counter(
+    pkg.get("contentType") for pkg in catalog
+    if (pkg.get("packageKey") or "").split("/")[1:2] == ["unknown"]
+)
+
+lines += ["", "## Coverage: why 65 and not 67", ""]
+lines.append(f"The catalog contains **{len(repo_types)} distinct aircraft repository names**, but only")
+lines.append(f"**{len(documented)}** of them ship an `AircraftModel` package. The other two are accounted for:")
+lines.append("")
+lines.append("| repo | packages | what it is |")
+lines.append("|---|---|---|")
+for repo in no_model:
+    types = repo_types[repo]
+    nclasses = len(types)
+    label = f"{nclasses} package class" if nclasses == 1 else f"{nclasses} package classes"
+    if repo == "unknown":
+        detail = ", ".join(f"{n} x {t}" for t, n in unknown_types.items())
+        desc = ("the vendor's own manifest lost the repository name. It holds 25 liveries, the "
+                "`Piper PA28A` shared texture set and the `GroundServices` sound package, with no aircraft "
+                "to attach them to")
+    else:
+        desc = ("configuration only - `Boeing 787-10 (2026)`. It reuses the `b78x` model, shared "
+                "textures and liveries, so it needs no page of its own")
+    lines.append(f"| `{repo}` | {label} | {desc} |")
+lines.append("")
+lines.append("## 65 airframes, 109 variants")
+lines.append("")
+lines.append("A *model package* is one fuselage. Engine fits, wingtip devices and door configurations are not")
+lines.append("separate models - liveries carry a `visibleGroups` list that decides which variant they appear")
+lines.append("under. Across the catalog those groups number 109, and the common ones are:")
+lines.append("")
+variant_counter: Counter[str] = Counter()
+for pkg in catalog:
+    if pkg.get("contentType") != "AircraftLivery":
+        continue
+    lv = (pkg.get("metadata") or {}).get("livery") or {}
+    for g in lv.get("visibleGroups") or []:
+        variant_counter[g] += 1
+lines.append("| group | liveries | meaning |")
+lines.append("|---|---|---|")
+MEANING = {
+    "winglet": "wingtip fit", "wingfence": "wingtip fit", "sharklet": "wingtip fit",
+    "CFM": "engine", "IAE": "engine", "GE": "engine", "PW": "engine",
+    "LEAP1A": "engine", "GEnx": "engine", "engine_ge90_115b": "engine",
+    "engine_rr700": "engine", "PW1100G": "engine",
+    "door_plug": "door configuration", "classic": "airframe generation",
+    "split": "configuration", "CenterGear": "landing gear",
+    "NewRadio_Captain": "cockpit option", "NewRadio_FirstOfficer": "cockpit option",
+    "internet": "equipment option",
+}
+for group, count in variant_counter.most_common(14):
+    lines.append(f"| `{group}` | {count} | {MEANING.get(group, 'variant selector')} |")
+lines.append("")
+lines.append("Practically: pick the airframe (one of the 65 pages), then pick a livery directory from that")
+lines.append("page. Whether the livery *shows up* for your engine/wingtip combination is decided by these")
+lines.append("groups, not by the file layout - the texture path is identical either way.")
+lines.append("")
+
 lines += [
     "",
     "## Regenerate this data",
